@@ -1,0 +1,641 @@
+# Chef-franko
+
+<!DOCTYPE html><html lang="es-419" itemscope itemtype="http://schema.org/WebPage"><head><script nonce="2DTprUq8yW89l-EfXxBEZQ">window['ppConfig'] = {productName: '6b8ce7c01e3dacd3d2c7a8cd322ff979', deleteIsEnforced:  false , sealIsEnforced:  false , heartbeatRate:  0.5 , periodicReportingRateMillis:  60000.0 , disableAllReporting:  false };(function(){'use strict';function k(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}function l(a){var b=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(b)return b.call(a);if(typeof a.length=="number")return{next:k(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var m=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a};
+function n(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");}var p=n(this);function q(a,b){if(b)a:{var c=p;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&m(c,a,{configurable:!0,writable:!0,value:b})}}
+q("Object.is",function(a){return a?a:function(b,c){return b===c?b!==0||1/b===1/c:b!==b&&c!==c}});q("Array.prototype.includes",function(a){return a?a:function(b,c){var d=this;d instanceof String&&(d=String(d));var e=d.length;c=c||0;for(c<0&&(c=Math.max(c+e,0));c<e;c++){var f=d[c];if(f===b||Object.is(f,b))return!0}return!1}});
+q("String.prototype.includes",function(a){return a?a:function(b,c){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(b instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(b,c||0)!==-1}});function r(a,b,c){a("https://csp.withgoogle.com/csp/proto/"+encodeURIComponent(b),JSON.stringify(c))}function t(){var a;if((a=window.ppConfig)==null?0:a.disableAllReporting)return function(){};var b,c,d,e;return(e=(b=window)==null?void 0:(c=b.navigator)==null?void 0:(d=c.sendBeacon)==null?void 0:d.bind(navigator))!=null?e:u}function u(a,b){var c=new XMLHttpRequest;c.open("POST",a);c.send(b)}
+function v(){var a=(w=Object.prototype)==null?void 0:w.__lookupGetter__("__proto__"),b=x,c=y;return function(){var d=a.call(this),e,f,g,h;r(c,b,{type:"ACCESS_GET",origin:(f=window.location.origin)!=null?f:"unknown",report:{className:(g=d==null?void 0:(e=d.constructor)==null?void 0:e.name)!=null?g:"unknown",stackTrace:(h=Error().stack)!=null?h:"unknown"}});return d}}
+function z(){var a=(A=Object.prototype)==null?void 0:A.__lookupSetter__("__proto__"),b=x,c=y;return function(d){d=a.call(this,d);var e,f,g,h;r(c,b,{type:"ACCESS_SET",origin:(f=window.location.origin)!=null?f:"unknown",report:{className:(g=d==null?void 0:(e=d.constructor)==null?void 0:e.name)!=null?g:"unknown",stackTrace:(h=Error().stack)!=null?h:"unknown"}});return d}}function B(a,b){C(a.productName,b);setInterval(function(){C(a.productName,b)},a.periodicReportingRateMillis)}
+var D="constructor __defineGetter__ __defineSetter__ hasOwnProperty __lookupGetter__ __lookupSetter__ isPrototypeOf propertyIsEnumerable toString valueOf __proto__ toLocaleString x_ngfn_x".split(" "),E=D.concat,F=navigator.userAgent.match(/Firefox\/([0-9]+)\./),G=(!F||F.length<2?0:Number(F[1])<75)?["toSource"]:[],H;if(G instanceof Array)H=G;else{for(var I=l(G),J,K=[];!(J=I.next()).done;)K.push(J.value);H=K}var L=E.call(D,H),M=[];
+function C(a,b){for(var c=[],d=l(Object.getOwnPropertyNames(Object.prototype)),e=d.next();!e.done;e=d.next())e=e.value,L.includes(e)||M.includes(e)||c.push(e);e=Object.prototype;d=[];for(var f=0;f<c.length;f++){var g=c[f];d[f]={name:g,descriptor:Object.getOwnPropertyDescriptor(Object.prototype,g),type:typeof e[g]}}if(d.length!==0){c=l(d);for(e=c.next();!e.done;e=c.next())M.push(e.value.name);var h;r(b,a,{type:"SEAL",origin:(h=window.location.origin)!=null?h:"unknown",report:{blockers:d}})}};var N=Math.random(),O=t(),P=window.ppConfig;P&&(P.disableAllReporting||P.deleteIsEnforced&&P.sealIsEnforced||N<P.heartbeatRate&&r(O,P.productName,{origin:window.location.origin,type:"HEARTBEAT"}));var y=t(),Q=window.ppConfig;if(Q)if(Q.deleteIsEnforced)delete Object.prototype.__proto__;else if(!Q.disableAllReporting){var x=Q.productName;try{var w,A;Object.defineProperty(Object.prototype,"__proto__",{enumerable:!1,get:v(),set:z()})}catch(a){}}
+(function(){var a=t(),b=window.ppConfig;b&&(b.sealIsEnforced?Object.seal(Object.prototype):b.disableAllReporting||(document.readyState!=="loading"?B(b,a):document.addEventListener("DOMContentLoaded",function(){B(b,a)})))})();}).call(this);
+</script><meta charset="utf-8"><script nonce="2DTprUq8yW89l-EfXxBEZQ">var DOCS_timing={}; DOCS_timing['sl']=new Date().getTime();</script><script nonce="2DTprUq8yW89l-EfXxBEZQ">function _DumpException(e) {throw e;}</script><script data-id="_gd" nonce="2DTprUq8yW89l-EfXxBEZQ">window.WIZ_global_data = {"K1cgmc":"%.@.[null,null,null,[1,1,[1762846393,609671000],4],null,25]]","nQyAE":{}};</script><script nonce="2DTprUq8yW89l-EfXxBEZQ">_docs_flag_initialData={"atari-emtpr":false,"atari-eibrm":false,"atari-etm":false,"docs-text-usc":true,"atari-bae":false,"docs-text-etsrdpn":false,"docs-text-etsrds":false,"docs-text-endes":false,"docs-text-escpv":true,"docs-text-ecfs":false,"docs-text-eetxp":false,"docs-text-ettctvs":false,"docs-text-escoubs":false,"docs-text-escivs":false,"docs-text-escitrbs":false,"docs-text-eiosmc":false,"docs-text-etb":false,"docs-text-esbefr":false,"docs-etshc":false,"docs-text-tbcb":2.0E7,"docs-efsmsdl":false,"docs-text-etof":false,"docs-text-ehlb":false,"docs-text-dwit":false,"docs-text-elawp":false,"docs-eec":true,"docs-esff":false,"docs-idu":false,"docs-sup":"","docs-dli":false,"docs-liap":"/naLogImpressions","ilcm":{"eui":"AHKXmL2vXQuJXOibZ4o-ZMO9Lw52nI_TpGbQyONPVCA7SmUmAW5wDby4H86xObuxNevtBi1xfnOI","je":1,"sstu":1762930785611740,"si":"CNzf9fmE7JADFUFFNwgd68ckwg","gsc":null,"ei":[5703839,5704621,5706832,5706836,5738513,5738529,5740798,5740814,5743108,5743124,5747267,5758807,5758823,5762243,5762259,5767835,5767851,5773662,5773678,5774836,5774852,5776501,5776517,5784931,5784947,5784951,5784967,5798980,5798996,14101306,14101502,14101510,14101534,49472063,49472071,49643568,49643576,49644015,49644023,49769337,49769345,49822921,49822929,49823164,49823172,49833462,49833470,49842855,49842863,49924706,49924714,50266222,50266230,50273528,50273536,50297076,50297084,50549555,50549563,50561343,50561351,50586962,50586970,70971256,70971264,71038255,71038263,71079938,71079946,71085241,71085249,71120968,71120976,71325556,71325564,71387889,71387897,71429507,71429515,71465947,71465955,71478200,71478208,71478589,71478597,71528597,71528605,71530083,71530091,71544834,71544842,71545513,71545521,71546425,71546433,71573870,71573878,71642103,71642111,71652641,71658040,71658048,71659813,71659821,71689860,71689868,71710040,71710048,71742921,71742937,71798420,71798436,71798440,71798456,71855010,71855018,71897827,71897835,71960540,71960548,94327671,94327679,94333153,94333161,94350289,94350305,94353368,94353376,94434257,94434265,94507744,94507752,94509890,94509898,94523168,94523176,94624865,94624873,94629757,94629765,94660795,94660803,94661802,94661810,94692298,94692306,94744856,94744864,94819001,94819006,94819061,94819066,94819405,94819410,94862087,94862095,94864653,94864661,94904089,94904097,94918952,94918960,95087186,95087194,95087217,95087225,95112873,95112881,95118561,95118569,95135933,95135941,95182361,95182366,95234871,95234879,95273169,95273177,95314802,95314810,95317482,95317490,99265946,99265954,99338440,99338448,99368792,99368800,99402331,99402339,99440843,99440851,99457807,99457815,101508355,101508363,101519280,101519288,101562406,101562414,101631191,101631199,101659254,101659262,101687117,101687125,101754342,101754350,101836971,101836979,101837416,101837424,101855239,101855247,101917185,101917193,101922739,101922747,101922880,101922888,102030642,102030650,102074087,102074095,102146687,102146695,102161447,102161455,102196124,102196132,102198282,102198290,102199034,102199050,102244489,102244497,102249831,102262249,102262257,102280628,102280636,102287864,102287872,102343036,102343044,102343380,102343388,102402679,102402687,102428666,102428674,102430621,102430629,102461076,102461081,102469860,102469868,102515093,102515098,102517339,102517344,102673375,102685384,102685389,102690600,102690608,102691157,102691162,102718396,102721215,102721220,102741226,102741234,102762315,102762323,102774707,102774715,102787563,102807790,102807798,102867835,102867843,102887236,102887244,102903660,102903668,102909750,102909755,102921493,102921501,102925819,102925827,102932587,102932595,102944189,102944194,102944268,102944273,102944503,102944508,102944582,102944587,102944680,102944685,102956685,102956693,102969762,102969770,102972669,102972677,102973360,102973368,102984172,102984180,102988272,102988277,102988695,102988700,103011418,103011426,103176010,103176018,103176419,103176427,103286273,103286281,103289097,103289102,103325406,103325411,103343830,103343838,103354296,103354304,103354852,103354860,103355353,103355361,103355643,103355651,104519319,104519335,104530130,104573899,104573907,104599801,104599806,104615595,104615603,104661247,104661255,104663867,104663883,104699504,104699512,104764124,104764132,104792933,104792938,104801546,104801554,104869084,104869092,104874944,104874960,104907811,104907819,104940397,104940405,104962265,104975008,104975016,104983169,104983177,105060729,105060737,105072273,105072281,105080086,105080088,105082097,105082105,105087248,105087256,105120751,105120767,105143309,105143317,105180894,105180902,105230580,105230588,105276179,105276184,105282977,105283687,105283695,105293716,105293724,105302073,105302081,105346285,105346293,105360418,105360426,105360882,105360890,105393811,105393819,105439161,105439169,105442979,115509982,115509990,115533919,115533924,115629952,115629960,115669258,115669266,115769458,115769466,115808234,115808242,115862698,116055453,116055461,116059345,116059353,116079258,116307750,116361234,116367892,116425642],"crc":0,"cvi":[]},"docs-ccdil":false,"docs-eil":true,"info_params":{"token":"AHL0AtI6TOKBaRi7yr_0IqUQZbFdqAyZvw:1762930785498"},"buildLabel":"editors.sites-viewer-frontend_20251105.04_p2","docs-show_debug_info":false,"atari-jefp":"/_/view/jserror","docs-jern":"view","atari-rhpp":"/_/view","docs-ecuach":false,"docs-cclt":2033,"docs-ecci":true,"docs-esi":false,"docs-efypr":true,"docs-eyprp":true,"docs-li":"104240","docs-trgthnt":"","docs-etmhn":false,"docs-thnt":"","docs-hbt":[],"docs-hdet":["nMX17M8pQ0kLUkpsP190WPbQDRJQ","17hED8kG50kLUkpsP190TThQn3DA","BDNZR4PXx0kLUkpsP190SJtNPkYt","Etj5wJCQk0kLUkpsP190NwiL8UMa","xCLbbDUPA0kLUkpsP190XkGJiPUm","2NUkoZehW0kLUkpsP190UUNLiXW9","yuvYtd5590kLUkpsP190Qya5K4UR","ZH4rzt2uk0kLUkpsP190UDkF5Bkq","uQUQhn57A0kLUkpsP190WHoihP41","93w8zoRF70kLUkpsP190TxXbtSeV","fAPatjr1X0kLUkpsP190SaRjNRjw","T4vgqqjK70kLUkpsP190ScPehgAW","JyFR2tYWZ0kLUkpsP190Rn3HzkxT","ufXj7vmeJ0kLUkpsP190QURhvJn2","KFks7UeZ30kLUkpsP190UUMR6cvh","LcTa6EjeC0kLUkpsP190RKgvW5qi","s3UFcjGjt0kLUkpsP190Z45ftWRr","o99ewBQXy0kLUkpsP190Nq2qr6tf","PHVyy5uSS0kLUkpsP190SUsYo8gQ","yZn21akid0iSFTCbiEB0WPiGEST3","h2TtqzmQF0kLUkpsP190YPJiQt7p","MZi9vb5UC0kLUkpsP190ReUhvVjy","dSR6SPjB80kLUkpsP190Y3xHa9qA","Bz6B7VmLu0kLUkpsP190W3FeobP7","AiLoubzsd0kLUkpsP190XtYNPgYT","2J3DVQoVh0kLUkpsP190R5wShSrC","MLmbZasLS0kLUkpsP190YHf6Zjsf","S1T4ezMsZ0kLUkpsP190U6GfQUxi","N5u4VeWhx0iSFTCbiEB0VUTNdX6g","XM16tjwrD0iSFTCbiEB0NfzvTeuU","ybYTJk1eD0iSFTCbiEB0QV4rkzSF","TgXar1TSG0iSFTCbiEB0SsXMaKuP","JYfGDkExa0iSFTCbiEB0TTQnEDtH","2i9JBUZ3w0iSFTCbiEB0RytbUoNq","pgvTVXNKa0iSFTCbiEB0ShqmBTMR","NsVnd81bW0iSFTCbiEB0RhcXEK9M","rTQirATnb0iSFTCbiEB0W5cPcA7D","wNyww2Syr0iSFTCbiEB0Pzsbemba","DVdpfbqGj0iSFTCbiEB0RP4dMdFg","WKN3dsuG20iSFTCbiEB0NtEYhMK7","S5iPRteXX0iSFTCbiEB0YkMazE6h","6hmou1AcB0iSFTCbiEB0R9rZWXdz","wvo4NcLUj0iSFTCbiEB0Tt7mcVxE","HWuSeN2AB0iSFTCbiEB0PoBwHT2F","rMLvYG5Cd0iSFTCbiEB0VMB6o5sk","EnxXFzAMR0iSFTCbiEB0NxWnFJEU","rTcCMw3BM0mHq3jmV6o0RHeAExRK","HUYzfGVRa0mHq3jmV6o0Uxe2caXK","1XYMmM1Cu0mHq3jmV6o0Z3pEi8xm","xHhMJiXiV0mHq3jmV6o0WB8WinyM","xwSFpxEiU0mHq3jmV6o0PcnvcKmd","4MBkBg26q0mHq3jmV6o0QeKPRMpY","y5g8iW2T80mHq3jmV6o0Nr8SAj4C","W9YRKy3Lb0iSFTCbiEB0Xfs1EfPr","Ed3nhrN8D0iSFTCbiEB0RN4bJ53y","zxDKY7PC10iSFTCbiEB0UDYPJwDZ","bhEyDmbwi0mHq3jmV6o0TngCF1v2","6rKYZ6uHA0mHq3jmV6o0TeDZjgB8","71Deousgx0mHq3jmV6o0WXBQiyzi","sVEZbUAa70mHq3jmV6o0TNq1M7FF","8ZPFZT5nG0mHq3jmV6o0PJ5yoVh4","P55v8p4Lk0mHq3jmV6o0VjggjHMV","QqnZoz9ko0mHq3jmV6o0QskzBcHn","6nr31z9Wv0mERqSGkGf0VhuvAXWC","RLHeYNm410mERqSGkGf0Y817EUFK","vmx68XtfJ0mERqSGkGf0RCUBfsQr","687J7yD1q0mERqSGkGf0RVmMYHo1","qwhWQy8Zi0mERqSGkGf0W2tdypUF","wF8Sk241e0mERqSGkGf0YNtN6gpV","ijUhdx2QN0mERqSGkGf0TSD26iBJ","3iBLaMnuG0mERqSGkGf0VdY8XuLS","cFR77YEGo0iSFTCbiEB0PcMDWjX2","evUYuNCS80mERqSGkGf0Psi8j3Dw","soWncRV7C0mERqSGkGf0PZheXrWA","TvjoiCaar0mERqSGkGf0S9qS5adj","txL54xWLC0mERqSGkGf0XoEGTvCu","MP3EsW1un0mERqSGkGf0QDkfTxat","N1q4Y3fqz0mERqSGkGf0W1oPWWoc","pnKWhXiJi0mERqSGkGf0RDJejrBm","ffZmMGtYT0suK1NZr2K0QUxSzEMN","NagbcZWyB0suK1NZr2K0SJmfmJ3n","KMcLKvubv0suK1NZr2K0PLMUJ7zr","a13ejFS5i0suK1NZr2K0WzewY5tP","pZ1hXv7ve0suK1NZr2K0U5qoNhyU","pwLDucJZU0ezFcgqx310NgtmYpbV","TCKDVQ6J0Bn3gbW4AcZC0PQKypCa","Z7vabQzZ0Bn3gbW4AcZC0TfvmSab","UUNcLtsso0mERqSGkGf0Uwg2tMZa","wYCZkqoz10fBWirfAym0S1sADKbJ"],"docs-hunds":false,"docs-hae":"PROD","docs-ehn":true,"docs-epq":true,"docs-upap":"/_/view/prefs"}; _docs_flag_cek= null ; if (window['DOCS_timing']) {DOCS_timing['ifdld']=new Date().getTime();}</script><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="https://lh3.googleusercontent.com/sitesv/AAzXCkeLGFl-l-F2c0GmVg8dQpKGsgX1-0juf424GiGEdikKZfrJHiFGqKlyuNVzsixUiMevid8B5CB9BWMDZ34ULhl57KHsrW3EN3c5RrebI0WnJvrr_w5TWYCEdxCfa5lsJJqRN6CZATykX2qGVMEqlxCv948LUzVhPhnjtsUWQEVr2WLJsayKQM4Ce831GFgwTgeJmpRG9P5lG2WxTeJSNw"><meta property="og:title" content="CHEF FRANKO SALGADO"><meta property="og:type" content="website"><meta property="og:url" content="https://sites.google.com/villaverano.com/chef-franko-salgado/p%C3%A1gina-principal"><meta property="og:description" content="
+"><meta itemprop="name" content="CHEF FRANKO SALGADO"><meta itemprop="description" content="
+"><meta itemprop="url" content="https://sites.google.com/villaverano.com/chef-franko-salgado/p%C3%A1gina-principal"><meta itemprop="thumbnailUrl" content="https://lh3.googleusercontent.com/sitesv/AAzXCkfUDyKcINs_n1a3gtIxQS_OdltMrbgjY6gGLpuuOOcCbROthzG5QR6ccf1EH6QlScCGG-PW7sR3mvrex8eQzyesGoliI-S7k0ssEE8PjFuo4j3hA97MS21JriQB6UIcRltcfjkk0d94T7N88baUex4NIXecLMztw6h_NmP5VQgNbq5dd0XWKXzvRhY=w16383"><meta itemprop="image" content="https://lh3.googleusercontent.com/sitesv/AAzXCkfUDyKcINs_n1a3gtIxQS_OdltMrbgjY6gGLpuuOOcCbROthzG5QR6ccf1EH6QlScCGG-PW7sR3mvrex8eQzyesGoliI-S7k0ssEE8PjFuo4j3hA97MS21JriQB6UIcRltcfjkk0d94T7N88baUex4NIXecLMztw6h_NmP5VQgNbq5dd0XWKXzvRhY=w16383"><meta itemprop="imageUrl" content="https://lh3.googleusercontent.com/sitesv/AAzXCkfUDyKcINs_n1a3gtIxQS_OdltMrbgjY6gGLpuuOOcCbROthzG5QR6ccf1EH6QlScCGG-PW7sR3mvrex8eQzyesGoliI-S7k0ssEE8PjFuo4j3hA97MS21JriQB6UIcRltcfjkk0d94T7N88baUex4NIXecLMztw6h_NmP5VQgNbq5dd0XWKXzvRhY=w16383"><meta property="og:image" content="https://lh3.googleusercontent.com/sitesv/AAzXCkfUDyKcINs_n1a3gtIxQS_OdltMrbgjY6gGLpuuOOcCbROthzG5QR6ccf1EH6QlScCGG-PW7sR3mvrex8eQzyesGoliI-S7k0ssEE8PjFuo4j3hA97MS21JriQB6UIcRltcfjkk0d94T7N88baUex4NIXecLMztw6h_NmP5VQgNbq5dd0XWKXzvRhY=w16383"><link href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7COpen%20Sans%3A400%2C400italic%2C700%2C700italic&display=swap" rel="stylesheet" nonce="sfWJi7RcYr4OwJ--cifKHQ"><link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:300,400,500,700|Source+Code+Pro:400,700&display=swap" rel="stylesheet" nonce="sfWJi7RcYr4OwJ--cifKHQ"><script nonce="2DTprUq8yW89l-EfXxBEZQ">(function() {var img = new Image().src = "https://ssl.gstatic.com/atari/images/results-not-loaded.svg";})();</script><link rel="stylesheet" href="https://www.gstatic.com/_/atari/_/ss/k=atari.vw.Zd9yBdX_Lo4.L.W.O/am=AAAGIA/d=1/rs=AGEqA5kYOmCdQ5bOMqX8rB3qzvvNWXv4lw" data-id="_cl" nonce="sfWJi7RcYr4OwJ--cifKHQ"><script nonce="2DTprUq8yW89l-EfXxBEZQ"></script><title>CHEF FRANKO SALGADO</title><style jsname="ptDGoc" nonce="sfWJi7RcYr4OwJ--cifKHQ">.M63kCb{background-color: rgba(255,255,255,1);}.OUGEr{color: rgba(33,33,33,1);}.duRjpb .OUGEr{color: rgba(133,114,81,1);}.JYVBee .OUGEr{color: rgba(133,114,81,1);}.OmQG5e .OUGEr{color: rgba(133,114,81,1);}.iwQgFb{background-color: rgba(0,0,0,0.150000006);}.ySLm4c{font-family: 'Open Sans', sans-serif;}.CbiMKe{background-color: rgba(130,113,83,1);}.qeLZfd .zfr3Q{color: rgba(33,33,33,1);}.qeLZfd .qnVSj{color: rgba(33,33,33,1);}.qeLZfd .Glwbz{color: rgba(33,33,33,1);}.qeLZfd .duRjpb{color: rgba(116,102,77,1);}.qeLZfd .qLrapd{color: rgba(116,102,77,1);}.qeLZfd .JYVBee{color: rgba(116,102,77,1);}.qeLZfd .aHM7ed{color: rgba(116,102,77,1);}.qeLZfd .OmQG5e{color: rgba(116,102,77,1);}.qeLZfd .NHD4Gf{color: rgba(116,102,77,1);}.qeLZfd .aw5Odc{color: rgba(116,102,77,1);}.qeLZfd .dhtgD:hover{color: rgba(130,104,63,1);}.qeLZfd .dhtgD:visited{color: rgba(116,102,77,1);}.qeLZfd .iwQgFb{background-color: rgba(0,0,0,0.150000006);}.qeLZfd .OUGEr{color: rgba(33,33,33,1);}.qeLZfd .duRjpb .OUGEr{color: rgba(116,102,77,1);}.qeLZfd .JYVBee .OUGEr{color: rgba(116,102,77,1);}.qeLZfd .OmQG5e .OUGEr{color: rgba(116,102,77,1);}.qeLZfd:before{background-color: rgba(247,244,238,1); display: block;}.lQAHbd .zfr3Q{color: rgba(255,255,255,1);}.lQAHbd .qnVSj{color: rgba(255,255,255,1);}.lQAHbd .Glwbz{color: rgba(255,255,255,1);}.lQAHbd .duRjpb{color: rgba(255,250,241,1);}.lQAHbd .qLrapd{color: rgba(255,250,241,1);}.lQAHbd .JYVBee{color: rgba(255,250,241,1);}.lQAHbd .aHM7ed{color: rgba(255,250,241,1);}.lQAHbd .OmQG5e{color: rgba(255,250,241,1);}.lQAHbd .NHD4Gf{color: rgba(255,250,241,1);}.lQAHbd .aw5Odc{color: rgba(255,250,241,1);}.lQAHbd .dhtgD:hover{color: rgba(255,255,255,1);}.lQAHbd .dhtgD:visited{color: rgba(255,250,241,1);}.lQAHbd .iwQgFb{background-color: rgba(255,255,255,0.150000006);}.lQAHbd .OUGEr{color: rgba(255,255,255,1);}.lQAHbd .duRjpb .OUGEr{color: rgba(255,250,241,1);}.lQAHbd .JYVBee .OUGEr{color: rgba(255,250,241,1);}.lQAHbd .OmQG5e .OUGEr{color: rgba(255,250,241,1);}.lQAHbd .CbiMKe{background-color: rgba(255,255,255,1);}.lQAHbd:before{background-color: rgba(130,113,83,1); display: block;}.cJgDec .zfr3Q{color: rgba(255,255,255,1);}.cJgDec .zfr3Q .OUGEr{color: rgba(255,255,255,1);}.cJgDec .qnVSj{color: rgba(255,255,255,1);}.cJgDec .Glwbz{color: rgba(255,255,255,1);}.cJgDec .qLrapd{color: rgba(255,255,255,1);}.cJgDec .aHM7ed{color: rgba(255,255,255,1);}.cJgDec .NHD4Gf{color: rgba(255,255,255,1);}.cJgDec .IFuOkc:before{background-color: rgba(33,33,33,1); opacity: 0; display: block;}.O13XJf{height: 310px; padding-bottom: 50px; padding-top: 50px;}.O13XJf .IFuOkc{background-image: url(https://ssl.gstatic.com/atari/images/aristotle-header-dark.jpg);}.O13XJf .IFuOkc:before{background-color: rgba(33,33,33,1); opacity: 0.5; display: block;}.O13XJf .zfr3Q{color: rgba(255,255,255,1);}.O13XJf .qnVSj{color: rgba(255,255,255,1);}.O13XJf .Glwbz{color: rgba(255,255,255,1);}.O13XJf .duRjpb{color: rgba(255,255,255,1);}.O13XJf .qLrapd{color: rgba(255,255,255,1);}.O13XJf .JYVBee{color: rgba(255,255,255,1);}.O13XJf .aHM7ed{color: rgba(255,255,255,1);}.O13XJf .OmQG5e{color: rgba(255,255,255,1);}.O13XJf .NHD4Gf{color: rgba(255,255,255,1);}.tpmmCb .zfr3Q{color: rgba(33,33,33,1);}.tpmmCb .zfr3Q .OUGEr{color: rgba(33,33,33,1);}.tpmmCb .qnVSj{color: rgba(33,33,33,1);}.tpmmCb .Glwbz{color: rgba(33,33,33,1);}.tpmmCb .qLrapd{color: rgba(33,33,33,1);}.tpmmCb .aHM7ed{color: rgba(33,33,33,1);}.tpmmCb .NHD4Gf{color: rgba(33,33,33,1);}.tpmmCb .IFuOkc:before{background-color: rgba(255,255,255,1); display: block;}.tpmmCb .Wew9ke{fill: rgba(33,33,33,1);}.dhtgD:hover{color: rgba(151,107,37,1);}.dhtgD:active{color: rgba(151,107,37,1);}.Zjiec{color: rgba(133,114,81,1); font-family: Roboto, sans-serif; font-size: 20pt; font-weight: 500; letter-spacing: 1px; padding-bottom: 57px; padding-left: 21.5px; padding-right: 21.5px; padding-top: 8px; text-align: center; text-transform: none;}.XMyrgf{margin-top: 0px; margin-left: 21.5px; margin-bottom: 24px; margin-right: 21.5px; text-align: center;}.TlfmSc{color: rgba(206,169,100,1); font-family: Roboto, sans-serif; font-size: 15pt; font-weight: 500; letter-spacing: 1.5px; text-transform: none;}.Mz8gvb{color: rgba(206,169,100,1);}.zDUgLc{background-color: rgba(255,255,255,1); border-bottom-style: solid; border-bottom-width: 1px; border-color: rgba(204,204,204,1);}.QTKDff.chg4Jd:focus{background-color: rgba(255,255,255,0.1199999973);}.YTv4We{color: rgba(133,114,81,1);}.YTv4We:hover:before{background-color: rgba(183,153,81,0.1199999973); display: block;}.YTv4We.chg4Jd:focus:before{border-color: rgba(183,153,81,0.3600000143); display: block;}.eWDljc{background-color: rgba(255,255,255,1);}.eWDljc .hDrhEe{padding-left: 8px;}.ZXW7w{color: rgba(106,106,106,1); opacity: 0.26;}.PsKE7e{color: rgba(106,106,106,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; font-weight: 400;}.lhZOrc{color: rgba(33,33,33,1);}.hDrhEe:hover{color: rgba(33,33,33,1);}.M9vuGd{color: rgba(33,33,33,1); font-weight: 700;}.jgXgSe:hover{color: rgba(33,33,33,1);}.j10yRb:hover{color: rgba(33,33,33,1);}.j10yRb.chg4Jd:focus:before{border-color: rgba(33,33,33,0.3600000143); display: block;}.tCHXDc{color: rgba(106,106,106,1);}.iWs3gf.chg4Jd:focus{background-color: rgba(106,106,106,0.1199999973);}.wgxiMe{background-color: rgba(255,255,255,1); border-color: rgba(0,0,0,0.150000006); border-style: solid; border-width: 1px;}.fOU46b .TlfmSc{color: rgba(255,255,255,1);}.fOU46b .KJll8d{background-color: rgba(255,255,255,1);}.fOU46b .Mz8gvb{color: rgba(255,255,255,1);}.fOU46b .Mz8gvb.chg4Jd:focus:before{border-color: rgba(255,255,255,1); display: block;}.fOU46b .qV4dIc{color: rgba(255,255,255,0.8700000048);}.fOU46b .jgXgSe:hover{color: rgba(255,255,255,1);}.fOU46b .M9vuGd{color: rgba(255,255,255,1);}.fOU46b .tCHXDc{color: rgba(255,255,255,0.8700000048);}.fOU46b .iWs3gf.chg4Jd:focus{background-color: rgba(255,255,255,0.1199999973);}.fOU46b .G8QRnc .Mz8gvb{color: rgba(0,0,0,0.8000000119);}.fOU46b .G8QRnc .Mz8gvb.chg4Jd:focus:before{border-color: rgba(0,0,0,0.8000000119); display: block;}.fOU46b .G8QRnc .ZXW7w{color: rgba(0,0,0,0.8000000119);}.fOU46b .G8QRnc .TlfmSc{color: rgba(0,0,0,0.8000000119);}.fOU46b .G8QRnc .KJll8d{background-color: rgba(0,0,0,0.8000000119);}.fOU46b .G8QRnc .qV4dIc{color: rgba(0,0,0,0.6399999857);}.fOU46b .G8QRnc .jgXgSe:hover{color: rgba(0,0,0,0.8199999928);}.fOU46b .G8QRnc .M9vuGd{color: rgba(0,0,0,0.8199999928);}.fOU46b .G8QRnc .tCHXDc{color: rgba(0,0,0,0.6399999857);}.fOU46b .G8QRnc .iWs3gf.chg4Jd:focus{background-color: rgba(0,0,0,0.1199999973);}.fOU46b .usN8rf .Mz8gvb{color: rgba(0,0,0,0.8000000119);}.fOU46b .usN8rf .Mz8gvb.chg4Jd:focus:before{border-color: rgba(0,0,0,0.8000000119); display: block;}.fOU46b .usN8rf .ZXW7w{color: rgba(0,0,0,0.8000000119);}.fOU46b .usN8rf .TlfmSc{color: rgba(0,0,0,0.8000000119);}.fOU46b .usN8rf .KJll8d{background-color: rgba(0,0,0,0.8000000119);}.fOU46b .usN8rf .qV4dIc{color: rgba(0,0,0,0.6399999857);}.fOU46b .usN8rf .jgXgSe:hover{color: rgba(0,0,0,0.8199999928);}.fOU46b .usN8rf .M9vuGd{color: rgba(0,0,0,0.8199999928);}.fOU46b .usN8rf .tCHXDc{color: rgba(0,0,0,0.6399999857);}.fOU46b .usN8rf .iWs3gf.chg4Jd:focus{background-color: rgba(0,0,0,0.1199999973);}.fOU46b .aCIEDd .qV4dIc{color: rgba(33,33,33,1);}.fOU46b .aCIEDd .TlfmSc{color: rgba(33,33,33,1);}.fOU46b .aCIEDd .KJll8d{background-color: rgba(33,33,33,1);}.fOU46b .aCIEDd .ZXW7w{color: rgba(33,33,33,1);}.fOU46b .aCIEDd .jgXgSe:hover{color: rgba(33,33,33,1); opacity: 0.82;}.fOU46b .aCIEDd .Mz8gvb{color: rgba(33,33,33,1);}.fOU46b .aCIEDd .tCHXDc{color: rgba(33,33,33,1);}.fOU46b .aCIEDd .iWs3gf.chg4Jd:focus{background-color: rgba(33,33,33,0.1199999973);}.fOU46b .a3ETed .qV4dIc{color: rgba(255,255,255,1);}.fOU46b .a3ETed .TlfmSc{color: rgba(255,255,255,1);}.fOU46b .a3ETed .KJll8d{background-color: rgba(255,255,255,1);}.fOU46b .a3ETed .ZXW7w{color: rgba(255,255,255,1);}.fOU46b .a3ETed .jgXgSe:hover{color: rgba(255,255,255,1); opacity: 0.82;}.fOU46b .a3ETed .Mz8gvb{color: rgba(255,255,255,1);}.fOU46b .a3ETed .tCHXDc{color: rgba(255,255,255,1);}.fOU46b .a3ETed .iWs3gf.chg4Jd:focus{background-color: rgba(255,255,255,0.1199999973);}@media only screen and (min-width: 1280px){.XeSM4.b2Iqye.fOU46b .LBrwzc .tCHXDc{color: rgba(255,255,255,0.8700000048);}}.XeSM4.b2Iqye.fOU46b .LBrwzc .iWs3gf.chg4Jd:focus{background-color: rgba(255,255,255,0.1199999973);}@media only screen and (min-width: 1280px){.KuNac.b2Iqye.fOU46b .tCHXDc{color: rgba(0,0,0,0.6399999857);}}.KuNac.b2Iqye.fOU46b .iWs3gf.chg4Jd:focus{background-color: rgba(0,0,0,0.1199999973);}.fOU46b .zDUgLc{opacity: 0;}.LBrwzc .ZXW7w{color: rgba(0,0,0,1);}.LBrwzc .KJll8d{background-color: rgba(0,0,0,1);}.GBy4H .ZXW7w{color: rgba(255,255,255,1);}.GBy4H .KJll8d{background-color: rgba(255,255,255,1);}.eBSUbc{background-color: rgba(255,255,255,1); color: rgba(33,33,33,0.6999999881);}.BFDQOb:hover{color: rgba(33,33,33,1);}.ImnMyf{background-color: rgba(255,255,255,1); color: rgba(33,33,33,1);}.Vs12Bd{background-color: rgba(247,244,238,1); color: rgba(33,33,33,1);}.S5d9Rd{background-color: rgba(130,113,83,1); color: rgba(255,255,255,1);}.zfr3Q{color: rgba(33,33,33,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; font-weight: 400; line-height: 1.56; margin-top: 16px;}.qnVSj{color: rgba(33,33,33,1);}.Glwbz{color: rgba(33,33,33,1);}.duRjpb{color: rgba(133,114,81,1); font-family: Roboto, sans-serif; font-size: 26pt; font-weight: 700; letter-spacing: 0px; line-height: 1.5; margin-top: 28px; text-transform: none;}.Ap4VC{margin-bottom: -28px;}.qLrapd{color: rgba(133,114,81,1);}.JYVBee{color: rgba(133,114,81,1); font-family: Roboto, sans-serif; font-size: 18pt; font-style: normal; font-weight: 700; line-height: 1.56; margin-top: 20px;}.CobnVe{margin-bottom: -20px;}.aHM7ed{color: rgba(133,114,81,1);}.OmQG5e{color: rgba(133,114,81,1); font-family: Roboto, sans-serif; font-size: 13pt; font-weight: 700; letter-spacing: 1px; line-height: 1.63; margin-top: 18px;}.GV3q8e{margin-bottom: -18px;}.NHD4Gf{color: rgba(133,114,81,1);}.LB7kq .duRjpb{font-size: 45pt; font-style: normal; font-weight: 500; letter-spacing: -0.5px; line-height: 1.26; margin-top: 45px;}.LB7kq .baZpAe .duRjpb{padding-bottom: 18px;}.LB7kq .duRjpb:not(.TYR86d):first-child:before{border-bottom-style: solid; border-bottom-width: 8px; border-color: rgba(206,169,100,1); margin-left: auto; margin-right: auto; width: 100px; display: block;}.LB7kq .JYVBee{font-size: 21pt;}@media only screen and (max-width: 479px){.LB7kq .duRjpb{font-size: 30pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.LB7kq .duRjpb{font-size: 38pt;}}@media only screen and (max-width: 479px){.LB7kq .JYVBee{font-size: 17pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.LB7kq .JYVBee{font-size: 19pt;}}.O13XJf{height: 310px; padding-bottom: 50px; padding-top: 50px;}@media only screen and (min-width: 480px) and (max-width: 767px){.O13XJf{height: 280px; padding-bottom: 45px; padding-top: 45px;}}@media only screen and (max-width: 479px){.O13XJf{height: 250px; padding-bottom: 40px; padding-top: 40px;}}.SBrW1{height: 480px;}@media only screen and (min-width: 480px) and (max-width: 767px){.SBrW1{height: 480px;}}@media only screen and (max-width: 479px){.SBrW1{height: 400px;}}.Wew9ke{fill: rgba(255,255,255,1);}.gk8rDe{height: 200px; padding-bottom: 40px; padding-top: 60px;}.gk8rDe .zfr3Q{color: rgba(0,0,0,1);}.gk8rDe .duRjpb{color: rgba(133,114,81,1); font-size: 36pt;}.gk8rDe .qLrapd{color: rgba(133,114,81,1);}.gk8rDe .duRjpb:not(.TYR86d):first-child:before{border-bottom-width: 6px; border-color: rgba(133,114,81,1); display: block;}.gk8rDe .JYVBee{color: rgba(33,33,33,1); margin-top: 13px;}.gk8rDe .aHM7ed{color: rgba(33,33,33,1);}.gk8rDe .OmQG5e{color: rgba(33,33,33,1);}.gk8rDe .NHD4Gf{color: rgba(33,33,33,1);}@media only screen and (max-width: 479px){.gk8rDe .duRjpb{font-size: 25pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.gk8rDe .duRjpb{font-size: 31pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.gk8rDe{padding-top: 45px;}}@media only screen and (max-width: 479px){.gk8rDe{padding-bottom: 0px; padding-top: 30px;}}.dhtgD{text-decoration: underline;}.JzO0Vc{background-color: rgba(255,255,255,1); border-color: rgba(0,0,0,0.150000006); border-right-style: solid; border-right-width: 1px; font-family: Lato, sans-serif; width: 250px;}@media only screen and (min-width: 1280px){.JzO0Vc{padding-top: 62px;}}.TlfmSc{font-family: Roboto, sans-serif; font-size: 15pt; font-weight: 500; letter-spacing: 1.5px; text-transform: none;}.PsKE7e{font-family: 'Open Sans', sans-serif; font-size: 12pt;}.IKA38e{line-height: 1.58;}.hDrhEe{padding-bottom: 8px; padding-top: 8px;}.dhtgD:hover{text-decoration: underline;}.Zjiec:before{border-bottom-style: solid; border-bottom-width: 1px; border-color: rgba(133,114,81,1); margin-bottom: 30px; margin-left: auto; margin-right: auto; width: 212px; display: block;}.rgLkl{background-color: rgba(158,158,158,1);}.zDUgLc{border-bottom-style: solid; border-bottom-width: 1px; border-color: rgba(204,204,204,1); opacity: 1;}.QmpIrf{background-color: rgba(130,113,83,1); border-color: rgba(255,255,255,1); color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.xkUom{border-color: rgba(130,113,83,1); color: rgba(130,113,83,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.xkUom:hover{background-color: rgba(130,113,83,0.1000000015);}.KjwKmc{color: rgba(130,113,83,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px; line-height: 22px;}.KjwKmc:hover{background-color: rgba(130,113,83,0.1000000015);}.lQAHbd .QmpIrf{background-color: rgba(255,255,255,1); border-color: rgba(133,114,81,1); color: rgba(133,114,81,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.lQAHbd .xkUom{border-color: rgba(255,255,255,1); color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.lQAHbd .xkUom:hover{background-color: rgba(255,255,255,0.1000000015);}.lQAHbd .KjwKmc{color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.lQAHbd .KjwKmc:hover{background-color: rgba(255,255,255,0.1000000015);}.lQAHbd .Mt0nFe{border-color: rgba(255,255,255,0.200000003);}.cJgDec .QmpIrf{background-color: rgba(255,255,255,1); border-color: rgba(133,114,81,1); color: rgba(133,114,81,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.cJgDec .xkUom{border-color: rgba(255,255,255,1); color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.cJgDec .xkUom:hover{background-color: rgba(255,255,255,0.1000000015);}.cJgDec .KjwKmc{color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.cJgDec .KjwKmc:hover{background-color: rgba(255,255,255,0.1000000015);}.tpmmCb .QmpIrf{background-color: rgba(255,255,255,1); border-color: rgba(133,114,81,1); color: rgba(133,114,81,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.tpmmCb .xkUom{border-color: rgba(130,113,83,1); color: rgba(130,113,83,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.tpmmCb .xkUom:hover{background-color: rgba(130,113,83,0.1000000015);}.tpmmCb .KjwKmc{color: rgba(130,113,83,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.tpmmCb .KjwKmc:hover{background-color: rgba(130,113,83,0.1000000015);}.gk8rDe .QmpIrf{background-color: rgba(130,113,83,1); border-color: rgba(255,255,255,1); color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.gk8rDe .xkUom{border-color: rgba(130,113,83,1); color: rgba(130,113,83,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.gk8rDe .xkUom:hover{background-color: rgba(130,113,83,0.1000000015);}.gk8rDe .KjwKmc{color: rgba(130,113,83,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.gk8rDe .KjwKmc:hover{background-color: rgba(130,113,83,0.1000000015);}.O13XJf .QmpIrf{background-color: rgba(255,255,255,1); border-color: rgba(133,114,81,1); color: rgba(133,114,81,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.O13XJf .xkUom{border-color: rgba(255,255,255,1); color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.O13XJf .xkUom:hover{background-color: rgba(255,255,255,0.1000000015);}.O13XJf .KjwKmc{color: rgba(255,255,255,1); font-family: 'Open Sans', sans-serif; font-size: 12pt; line-height: 22px;}.O13XJf .KjwKmc:hover{background-color: rgba(255,255,255,0.1000000015);}.Y4CpGd{font-family: 'Open Sans', sans-serif; font-size: 12pt;}.CMArNe{background-color: rgba(247,244,238,1);}.TMjjoe{font-family: Roboto, sans-serif; font-size: 9pt; line-height: 1.2; margin-top: 0px;}.GBy4H .zDUgLc{border-bottom-width: 0px;}.GBy4H .TlfmSc{color: rgba(255,255,255,0.8700000048);}.GBy4H .Mz8gvb{color: rgba(255,255,255,0.8700000048);}.GBy4H .Mz8gvb.chg4Jd:focus:before{border-color: rgba(255,255,255,0.8700000048); display: block;}.GBy4H .tCHXDc{color: rgba(255,255,255,0.8700000048);}.GBy4H .iWs3gf.chg4Jd:focus{background-color: rgba(255,255,255,0.1199999973);}.GBy4H .wgxiMe{background-color: rgba(0,0,0,1);}.GBy4H .qV4dIc{color: rgba(255,255,255,0.8700000048);}.GBy4H .M9vuGd{color: rgba(255,255,255,0.8700000048);}.GBy4H .Zjiec{color: rgba(255,255,255,0.8700000048);}.GBy4H .Zjiec:before{border-color: rgba(255,255,255,0.8700000048); display: block;}.GBy4H .PsKE7e{color: rgba(255,255,255,0.8700000048);}.GBy4H .lhZOrc.PsKE7e{color: rgba(255,255,255,1);}.GBy4H .aJHbb:hover{color: rgba(255,255,255,1);}.GBy4H .jgXgSe:hover{color: rgba(255,255,255,1);}.GBy4H .M9vuGd:hover{color: rgba(255,255,255,1);}.GBy4H .j10yRb:hover{color: rgba(255,255,255,1);}.GBy4H .eBSUbc{color: rgba(255,255,255,0.8700000048);}.fOU46b .ZXW7w{color: rgba(255,255,255,1);}.fOU46b .GBy4H .zDUgLc{border-bottom-width: 0px; opacity: 1;}.fOU46b .GBy4H .TlfmSc{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .YTv4We{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .YTv4We.chg4Jd:focus:before{border-color: rgba(255,255,255,0.8700000048); display: block;}.fOU46b .GBy4H .Mz8gvb{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .tCHXDc{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .iWs3gf.chg4Jd:focus{background-color: rgba(255,255,255,0.1199999973);}.fOU46b .GBy4H .qV4dIc{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .M9vuGd{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .Zjiec{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .Zjiec:before{border-color: rgba(255,255,255,0.8700000048); display: block;}.fOU46b .GBy4H .PsKE7e{color: rgba(255,255,255,0.8700000048);}.fOU46b .GBy4H .lhZOrc.PsKE7e{color: rgba(255,255,255,1);}.fOU46b .GBy4H .aJHbb:hover{color: rgba(255,255,255,1);}.fOU46b .GBy4H .jgXgSe:hover{color: rgba(255,255,255,1);}.fOU46b .GBy4H .M9vuGd:hover{color: rgba(255,255,255,1);}.fOU46b .LBrwzc .ZXW7w{color: rgba(0,0,0,1);}.fOU46b .LBrwzc .zDUgLc{opacity: 1; border-bottom-style: none;}.fOU46b .LBrwzc .Mz8gvb{color: rgba(33,33,33,1); border-bottom-style: none;}.LBrwzc .TlfmSc{color: rgba(33,33,33,1);}.LBrwzc .YTv4We{color: rgba(33,33,33,1);}.LBrwzc .YTv4We.chg4Jd:focus:before{border-color: rgba(33,33,33,1); display: block;}.LBrwzc .Mz8gvb{color: rgba(33,33,33,1); border-color: rgba(204,204,204,1); border-bottom-style: solid; border-bottom-width: 1px;}.LBrwzc .tCHXDc{color: rgba(106,106,106,1);}.LBrwzc .iWs3gf.chg4Jd:focus{background-color: rgba(106,106,106,0.1199999973);}.LBrwzc .qV4dIc{color: rgba(106,106,106,1);}.LBrwzc .M9vuGd{color: rgba(33,33,33,1);}.LBrwzc .Zjiec{color: rgba(33,33,33,1);}.LBrwzc .Zjiec:before{border-color: rgba(33,33,33,1); display: block;}.LBrwzc .IKA38e{color: rgba(106,106,106,1);}.LBrwzc .lhZOrc.IKA38e{color: rgba(33,33,33,1);}.LBrwzc .eBSUbc{color: rgba(106,106,106,1);}.LBrwzc .hDrhEe:hover{color: rgba(33,33,33,1);}.LBrwzc .jgXgSe:hover{color: rgba(33,33,33,1);}.LBrwzc .M9vuGd:hover{color: rgba(33,33,33,1);}.QcmuFb{padding-left: 20px;}.vDPrib{padding-left: 40px;}.TBDXjd{padding-left: 60px;}.bYeK8e{padding-left: 80px;}.CuqSDe{padding-left: 100px;}.Havqpe{padding-left: 120px;}.JvDrRe{padding-left: 140px;}.o5lrIf{padding-left: 160px;}.yOJW7c{padding-left: 180px;}.rB8cye{padding-left: 200px;}.RuayVd{padding-right: 20px;}.YzcKX{padding-right: 40px;}.reTV0b{padding-right: 60px;}.vSYeUc{padding-right: 80px;}.PxtZIe{padding-right: 100px;}.ahQMed{padding-right: 120px;}.rzhcXb{padding-right: 140px;}.PBhj0b{padding-right: 160px;}.TlN46c{padding-right: 180px;}.GEdNnc{padding-right: 200px;}@media only screen and (min-width: 1280px){.yxgWrb{margin-left: 250px;}}@media only screen and (max-width: 479px){.Zjiec{font-size: 16pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.Zjiec{font-size: 18pt;}}@media only screen and (max-width: 479px){.TlfmSc{font-size: 14pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.TlfmSc{font-size: 14pt;}}@media only screen and (max-width: 479px){.duRjpb{font-size: 20pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.duRjpb{font-size: 23pt;}}@media only screen and (max-width: 479px){.JYVBee{font-size: 15pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.JYVBee{font-size: 17pt;}}@media only screen and (max-width: 479px){.OmQG5e{font-size: 13pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.OmQG5e{font-size: 13pt;}}@media only screen and (max-width: 479px){.TlfmSc{font-size: 14pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.TlfmSc{font-size: 14pt;}}@media only screen and (max-width: 479px){.TMjjoe{font-size: 9pt;}}@media only screen and (min-width: 480px) and (max-width: 767px){.TMjjoe{font-size: 9pt;}}</style><script nonce="2DTprUq8yW89l-EfXxBEZQ">_at_config = [null,"AIzaSyChg3MFqzdi1P5J-YvEyakkSA1yU7HRcDI","897606708560-a63d8ia0t9dhtpdt4i3djab2m42see7o.apps.googleusercontent.com",null,null,null,null,null,null,null,null,null,null,null,"SITES_%s",null,null,null,null,null,null,null,null,null,["AHKXmL2vXQuJXOibZ4o-ZMO9Lw52nI_TpGbQyONPVCA7SmUmAW5wDby4H86xObuxNevtBi1xfnOI",1,"CNzf9fmE7JADFUFFNwgd68ckwg",1762930785611740,[5703839,5704621,5706832,5706836,5738513,5738529,5740798,5740814,5743108,5743124,5747267,5758807,5758823,5762243,5762259,5767835,5767851,5773662,5773678,5774836,5774852,5776501,5776517,5784931,5784947,5784951,5784967,5798980,5798996,14101306,14101502,14101510,14101534,49472063,49472071,49643568,49643576,49644015,49644023,49769337,49769345,49822921,49822929,49823164,49823172,49833462,49833470,49842855,49842863,49924706,49924714,50266222,50266230,50273528,50273536,50297076,50297084,50549555,50549563,50561343,50561351,50586962,50586970,70971256,70971264,71038255,71038263,71079938,71079946,71085241,71085249,71120968,71120976,71325556,71325564,71387889,71387897,71429507,71429515,71465947,71465955,71478200,71478208,71478589,71478597,71528597,71528605,71530083,71530091,71544834,71544842,71545513,71545521,71546425,71546433,71573870,71573878,71642103,71642111,71652641,71658040,71658048,71659813,71659821,71689860,71689868,71710040,71710048,71742921,71742937,71798420,71798436,71798440,71798456,71855010,71855018,71897827,71897835,71960540,71960548,94327671,94327679,94333153,94333161,94350289,94350305,94353368,94353376,94434257,94434265,94507744,94507752,94509890,94509898,94523168,94523176,94624865,94624873,94629757,94629765,94660795,94660803,94661802,94661810,94692298,94692306,94744856,94744864,94819001,94819006,94819061,94819066,94819405,94819410,94862087,94862095,94864653,94864661,94904089,94904097,94918952,94918960,95087186,95087194,95087217,95087225,95112873,95112881,95118561,95118569,95135933,95135941,95182361,95182366,95234871,95234879,95273169,95273177,95314802,95314810,95317482,95317490,99265946,99265954,99338440,99338448,99368792,99368800,99402331,99402339,99440843,99440851,99457807,99457815,101508355,101508363,101519280,101519288,101562406,101562414,101631191,101631199,101659254,101659262,101687117,101687125,101754342,101754350,101836971,101836979,101837416,101837424,101855239,101855247,101917185,101917193,101922739,101922747,101922880,101922888,102030642,102030650,102074087,102074095,102146687,102146695,102161447,102161455,102196124,102196132,102198282,102198290,102199034,102199050,102244489,102244497,102249831,102262249,102262257,102280628,102280636,102287864,102287872,102343036,102343044,102343380,102343388,102402679,102402687,102428666,102428674,102430621,102430629,102461076,102461081,102469860,102469868,102515093,102515098,102517339,102517344,102673375,102685384,102685389,102690600,102690608,102691157,102691162,102718396,102721215,102721220,102741226,102741234,102762315,102762323,102774707,102774715,102787563,102807790,102807798,102867835,102867843,102887236,102887244,102903660,102903668,102909750,102909755,102921493,102921501,102925819,102925827,102932587,102932595,102944189,102944194,102944268,102944273,102944503,102944508,102944582,102944587,102944680,102944685,102956685,102956693,102969762,102969770,102972669,102972677,102973360,102973368,102984172,102984180,102988272,102988277,102988695,102988700,103011418,103011426,103176010,103176018,103176419,103176427,103286273,103286281,103289097,103289102,103325406,103325411,103343830,103343838,103354296,103354304,103354852,103354860,103355353,103355361,103355643,103355651,104519319,104519335,104530130,104573899,104573907,104599801,104599806,104615595,104615603,104661247,104661255,104663867,104663883,104699504,104699512,104764124,104764132,104792933,104792938,104801546,104801554,104869084,104869092,104874944,104874960,104907811,104907819,104940397,104940405,104962265,104975008,104975016,104983169,104983177,105060729,105060737,105072273,105072281,105080086,105080088,105082097,105082105,105087248,105087256,105120751,105120767,105143309,105143317,105180894,105180902,105230580,105230588,105276179,105276184,105282977,105283687,105283695,105293716,105293724,105302073,105302081,105346285,105346293,105360418,105360426,105360882,105360890,105393811,105393819,105439161,105439169,105442979,115509982,115509990,115533919,115533924,115629952,115629960,115669258,115669266,115769458,115769466,115808234,115808242,115862698,116055453,116055461,116059345,116059353,116079258,116307750,116361234,116367892,116425642]],"AHL0AtI6TOKBaRi7yr_0IqUQZbFdqAyZvw:1762930785498",null,null,null,0,null,null,null,null,null,null,null,null,null,"https://drive.google.com",null,null,null,null,null,null,null,null,null,0,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"v2internal","https://docs.google.com",null,null,null,null,null,null,"https://sites.google.com/new/?authuser\u003d0",null,null,null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,"",null,null,null,null,null,null,null,null,null,null,null,null,6,null,null,"https://accounts.google.com/o/oauth2/auth","https://accounts.google.com/o/oauth2/postmessageRelay",null,null,null,null,78,"https://sites.google.com/new/?authuser\u003d0\u0026usp\u003dviewer_footer\u0026authuser\u003d0",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"https://www.gstatic.com/atari/embeds/83a60601c213b72fb19c1855fb0c5f26/intermediate-frame-minified.html",0,null,"v2beta",null,null,null,null,null,null,4,"https://accounts.google.com/o/oauth2/iframe",null,null,null,null,null,null,"https://1853675009-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"https://sites.google.com/villaverano.com/chef-franko-salgado/p%C3%A1gina-principal",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,0,null,"01li5eeq",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,null,null,0,"[{\"data\":{\"informed-publishing-overlay-promo-id\":{\"dismissed\":true,\"shownCount\":0}},\"keyPath\":[\"syncMap\",\"preferences\",\"atari-asp\",\"8\"],\"state\":{\"timestamp\":1762151190236945}},{\"data\":{\"value\":0},\"keyPath\":[\"syncMap\",\"preferences\",\"atari-estpsc\"],\"state\":{\"timestamp\":1762930785611551}},{\"data\":{\"value\":0},\"keyPath\":[\"syncMap\",\"preferences\",\"atari-sipsc\"],\"state\":{\"timestamp\":1762930785611551}}]",null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,[1762930785613,"editors.sites-viewer-frontend_20251105.04_p2","829006344","0",0,1,""],null,null,null,null,1,null,null,0,null,null,null,null,null,null,null,null,20,500,"https://domains.google.com",null,0,null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,null,null,null,null,1,0,1,0,0,0,0,null,null,null,null,null,"https://www.google.com/calendar/embed",null,null,null,null,0,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,"PROD",null,null,1,null,null,null,null,"wYCZkqoz10fBWirfAym0S1sADKbJ",null,1,{"500":0,"503":0}]; window.globals = {"enableAnalytics":true,"webPropertyId":"","showDebug":false,"hashedSiteId":"c06fca2be633a473aa8f7651faefef1c9ce9f8de3a22c3644d6576bda6d4d91b","normalizedPath":"villaverano.com/chef-franko-salgado/página-principal","pageTitle":"Página principal"}; function gapiLoaded() {if (globals.gapiLoaded == undefined) {globals.gapiLoaded = true;} else {globals.gapiLoaded();}}window.messages = []; window.addEventListener && window.addEventListener('message', function(e) {if (window.messages && e.data && e.data.magic == 'SHIC') {window.messages.push(e);}});</script><script src="https://apis.google.com/js/client.js?onload=gapiLoaded" nonce="2DTprUq8yW89l-EfXxBEZQ"></script><script nonce="2DTprUq8yW89l-EfXxBEZQ">(function(){}).call(this);
+</script><script nonce="2DTprUq8yW89l-EfXxBEZQ">const imageUrl =  null ;
+      function bgImgLoaded() {
+        if (!globals.headerBgImgLoaded) {
+          globals.headerBgImgLoaded = new Date().getTime();
+        } else {
+          globals.headerBgImgLoaded();
+        }
+      }
+      if (imageUrl) {
+        const img = new Image();
+        img.src = imageUrl;
+        img.onload = bgImgLoaded;
+        globals.headerBgImgExists = true;
+      } else {
+        globals.headerBgImgExists = false;
+      }
+      </script></head><body dir="ltr" itemscope itemtype="http://schema.org/WebPage" id="yDmH0d" css="yDmH0d"><div jscontroller="pc62j" jsmodel="iTeaXe" jsaction="rcuQ6b:WYd;GvneHb:og1FDd;vbaUQc:uAM5ec;"><div jscontroller="X4BaPc" data-is-embedded-search-enabled=true jsaction="rcuQ6b:WYd;o6xM5b:Pg9eo;HuL2Hd:mHeCvf;VMhF5:FFYy5e;sk3Qmb:HI1Mdd;JIbuQc:rSzFEd(z2EeY),aSaF6e(ilzYPe);"><div jscontroller="o1L5Wb" data-sitename="chef-franko-salgado" data-search-scope="1" data-domain="villaverano.com" data-universe="1" data-is-embedded-search-enabled=true data-embedded-items-count="1" jsmodel="fNFZH" jsaction="Pe9H6d:cZFEp;O0t7nc:cC5KLb;WyADff:AQk9Jb;WMZaJ:VsGN3;hJluRd:UADL7b;zuqEgd:HI9w0;tr6QDd:Y8aXB;MxH79b:xDkBfb;JIbuQc:SPXMTb(uxAMZ),LjG1Ed(a6mxbb);BNPLhd:TbIyBd;fGqJod:Tb1xee;" jsname="G0jgYd"><div jsname="gYwusb" class="p9b27"></div><div jscontroller="RrXLpc" jsname="XeeWQc" role="banner" jsaction="keydown:uiKYid(OH0EC);rcuQ6b:WYd;zuqEgd:ufqpf;JIbuQc:XfTnxb(lfEfFf),AlTiYc(GeGHKb),AlTiYc(m1xNUe),zZlNMe(pZn8Oc);YqO5N:ELcyfe;"><div jsname="bF1uUb" class="BuY5Fd" jsaction="click:xVuwSc;"></div><div jsname="MVsrn" class="TbNlJb "><div role="button" class="U26fgb mUbCce fKz7Od h3nfre M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="GeGHKb" aria-label="Volver al sitio" aria-disabled="false" tabindex="0" data-tooltip="Volver al sitio" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="V4YR2c" viewBox="0 0 24 24" focusable="false"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></span></span></div><div class="E2UJ5" jsname="M6JdT"><div class="rFrNMe b7AJhc zKHdkd" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow jsname="OH0EC" aria-expanded="true"><div class="aCsJod oJeWuf"><div class="aXBtI I0VJ4d Wic03c"><span jsslot class="A37UZe qgcB3c iHd5yb"><div role="button" class="U26fgb mUbCce fKz7Od i3PoXe M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="lfEfFf" aria-label="Buscar" aria-disabled="false" tabindex="0" data-tooltip="Buscar" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="vu8Pwe" viewBox="0 0 24 24" focusable="false"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></span></div><div class="EmVfjc SKShhf" data-loadingmessage="Cargando…" jscontroller="qAKInc" jsaction="animationend:kWijWc;dyRcpb:dyRcpb" jsname="aZ2wEe"><div class="Cg7hO" aria-live="assertive" jsname="vyyg5"></div><div jsname="Hxlbvc" class="xu46lf"><div class="ir3uv uWlRce co39ub"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv GFoASc Cn087"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv WpeOqd hfsr6b"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv rHV3jf EjXFBf"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div></div></div><div role="button" class="U26fgb mUbCce fKz7Od JyJRXe M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="m1xNUe" aria-label="Volver al sitio" aria-disabled="false" tabindex="0" data-tooltip="Volver al sitio" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="V4YR2c" viewBox="0 0 24 24" focusable="false"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></span></span></div></span><div class="Xb9hP"><input type="search" class="whsOnd zHQkBf" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Buscar en este sitio" value="" aria-disabled="false" autofocus role="combobox" data-initial-value=""/><div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">Buscar en este sitio</div></div><span jsslot class="A37UZe sxyYjd MQL3Ob"><div role="button" class="U26fgb mUbCce fKz7Od Kk06A M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="pZn8Oc" aria-label="Borrar la búsqueda" aria-disabled="false" tabindex="0" data-tooltip="Borrar la búsqueda" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg class="fAUEUd" viewBox="0 0 24 24" focusable="false"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></span></div></span><div class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd"></div></div></div><div class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div><div class="InHK7" jsname="aN0umc"><div class="GG9xTc" jsaction="click:wTqBkf;" jsname="e7EaC" tabindex="0" aria-label="Archivos incorporados"><svg class="vu8Pwe KYLCw" viewBox="0 0 24 24" focusable="false"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg><span class="HCIIgf">Archivos incorporados</span></div></div></div></div></div></div><div jsname="tiN4bf"><style nonce="sfWJi7RcYr4OwJ--cifKHQ">.rrJNTc{opacity: 0;}.bKy5e{pointer-events: none; position: absolute; top: 0;}</style><div class="bKy5e"><div class="rrJNTc" tabindex="-1"><div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper='true'><button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 WsSUlf jz7fPb" jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;" data-idom-class="LjDxcd XhPA0b LQeN7 WsSUlf jz7fPb" jsname="z2EeY" tabindex="0"><div class="VfPpkd-Jh9lGc"></div><div class="VfPpkd-J1Ukfc-LhBDec"></div><div class="VfPpkd-RLmnJb"></div><span jsname="V67aGc" class="VfPpkd-vQzf8d">Ir al contenido principal</span></button></div><div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper='true'><button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 WsSUlf br90J" jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;" data-idom-class="LjDxcd XhPA0b LQeN7 WsSUlf br90J" jsname="ilzYPe" tabindex="0"><div class="VfPpkd-Jh9lGc"></div><div class="VfPpkd-J1Ukfc-LhBDec"></div><div class="VfPpkd-RLmnJb"></div><span jsname="V67aGc" class="VfPpkd-vQzf8d">Ir a la barra de navegación</span></button></div></div></div><div class="M63kCb N63NQ"></div><div class="QZ3zWd"><div class="fktJzd AKpWA vS6Uxe fOU46b yMcSQd Ly6Unf G9Qloe XeSM4 XxIgdb" jsname="UzWXSb" data-uses-custom-theme="false" data-legacy-theme-name="Aristotle" data-legacy-theme-font-kit="Modern" data-legacy-theme-color-kit="Gold" jscontroller="Md9ENb" jsaction="gsiSmd:Ffcznf;yj5fUd:cpPetb;HNXL3:q0Vyke;e2SXKd:IPDu5e;BdXpgd:nhk7K;rcuQ6b:WYd;"><header id="atIdViewHeader"><div style="position:fixed; width: 100%; z-index: 100;"><div id="docs-banner-container"><div id="docs-banners"><div id="HB1eCd-mzNpsf-r8s4j-ORHb"></div><div id="HB1eCd-TZk80d-r8s4j-ORHb" aria-live="assertive" aria-atomic="true"></div><div id="HB1eCd-Vkfede-rJCtOc-b3rLgd-ORHb" aria-live="assertive" aria-atomic="true"></div></div><div class="HB1eCd-Vkfede-NBtyUd-PvRhvb-LwH6nd"></div></div></div><div class="BbxBP LBrwzc K5Zlne" jsname="WA9qLc" jscontroller="RQOkef" jsaction="rcuQ6b:ywL4Jf;VbOlFf:ywL4Jf;FaOgy:ywL4Jf; keydown:Hq2uPe; wheel:Ut4Ahc;" data-top-navigation="true" data-is-preview="false"><div class="VLoccc K5Zlne ELAV1d U8eYrb" style="background-color:rgb(255, 255, 255);" jsname="rtFGi"><div class="Pvc6xe"><div jsname="I8J07e" class="TlfmSc YSH9J"><a class="GAuSPc" jsname="jIujaf" href="/villaverano.com/chef-franko-salgado/página-principal"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfUDyKcINs_n1a3gtIxQS_OdltMrbgjY6gGLpuuOOcCbROthzG5QR6ccf1EH6QlScCGG-PW7sR3mvrex8eQzyesGoliI-S7k0ssEE8PjFuo4j3hA97MS21JriQB6UIcRltcfjkk0d94T7N88baUex4NIXecLMztw6h_NmP5VQgNbq5dd0XWKXzvRhY=w16383" class="lzy1Td" role="img" aria-label="Página principal del sitio" jsname="SwcDWb"><span class="QTKDff p46B7e">CHEF FRANKO SALGADO</span></a></div></div><div jsname="mADGA" class="zDUgLc" style="background-color:rgb(255, 255, 255);"></div></div></div></header><div jsname="ZBtY8b" tabindex="-1" class="UtePc RCETm SwuGbc" dir="ltr"><section id="h.6324afd961df3240_3" class="yaqOZd"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-EehZO Ft7HRd-AhqUyc-EehZO purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.6324afd961df3240_0" class="hJDwNd-AhqUyc-EehZO Ft7HRd-AhqUyc-EehZO jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkdlmBc4OY1L6AvzKkXUaTfF9HH5z-mMdbEoFw6N6Okuk7fYVCUqa0zBfNGtJwA7OGUmx54qVNiMEGq-PWbuFh4hWYzf7FyUdOi6coIZhg2lXATNKC8KG_vk5G39qy2RReNyH5NlBjk_3gPW7vm2H_2uVJCBuVPcjPAYo7sQ53ByZzaVgSM8uetDKTjCZXXW2nixiw_ZVA0ewokdJPgrAKstkj1fnLX1B-mT7Tg=w1280" class="CENy8b" role="img"></div></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div></div></div></div></div></section><section id="h.5022890d9d24c1ec_18" class="yaqOZd"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf JNdkSc SQVYQc yYI8W HQwdzb"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_40" class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkf0JzqurmuNCdVFhFlhSA3BvYsIGdBsXY9teajpO3N6mgiHHrlEKGwBuU7xNG9Oae7KUhUjNlga1UUZu61r9qyDjNjJcHS2m_VKY6lhECZvta-1skQVNwF3WPL_K7ypZN01-6kaZshAgfohu46Mj2HpcGvOacmwtyL5o15wh3qv2NtSFEr4UGSTsml1UCWWkeUZnAueTXisrKfezn9D1pfiMblbxhG7mkT4W2E=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_39" class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf jXK9ad D2fZ2 zu5uec wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd mGzaTb Depvyb baZpAe"></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf JNdkSc SQVYQc yYI8W HQwdzb"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_41" class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkcKQXV320F00iz4BBQoSEC_q-KMkHZYU6PPWj42_sIhuf2pivrKatR3LSI1wbQOw1f2A8Jgm1Ogy4ssTRfcq5iCbVKYPl8fAn8VFuEL5vTEE0Eu8mk4o5aCU6BQy6KK9aWOyiI63fKTR5bZWCV0p3OV_NlUzz9bYoq9xuE1KcOKtQgeAA9Z9wb3KgyJ7CtoeoBYZVTsCa72rr4RRtNxQGr7QT6lpR6k4spQndo=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_34" class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf jXK9ad D2fZ2 zu5uec wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd mGzaTb Depvyb baZpAe"></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_15" class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkcPObxf2S8-lm30gJlK3SWCQxMcB6kAti2ldh6L4K0xpG8PIf3MznEwRfOzS9zOIv7gxUtjEZyMdCiICIs3JMVap2jvhpEmDY0cMLZTKIC178rP6AfhtjQXwjdrcx0pQRBJrNlIJsRmpUEQVjmMMC0XAotb0_PA8JV04JuO-tB-bBscUCgLJdTnqOxYlGwFXaTzCE9zhu_XSqghNYg1AhIOIy-q8tQ9g7Mm3BI=w1280" class="CENy8b" role="img" style="width: 100%; margin: -0.2347423411% 0 -0.2347423411% 0%"></div></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_0" class="hJDwNd-AhqUyc-c5RTEf Ft7HRd-AhqUyc-c5RTEf purZT-AhqUyc-c5RTEf ZcASvf-AhqUyc-c5RTEf pSzOP-AhqUyc-c5RTEf Ktthjf-AhqUyc-c5RTEf jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfDzpRGUZdfWxfnGNaoqI_L2up0ZRvzwRo-trT70q9zNz_JKeCQQnLj8Q9ZJLGeqXNbt4syjkKDJsH0etA4aWoq-jOiwzsCW93qKNYVXjqpuVymgc4QxNWGyEEOdFLP8Sq0v_qPwi3lewqye5gZs3oDKNETff8-1KvEOVwn4XEhAQYvn_RqvgmSHAy_mfKY-Br-3gNiwj_HT94CKLEvdmfhNF9j1Qh4VFOgK04=w1280" class="CENy8b" role="img"></div></div></div></div></div></div></div></div></div></div></section><section id="h.5022890d9d24c1ec_52" class="yaqOZd WxWicb"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-uQSCkd Ft7HRd-AhqUyc-uQSCkd purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_55" class="hJDwNd-AhqUyc-uQSCkd Ft7HRd-AhqUyc-uQSCkd jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="iwQgFb" role="presentation"></div></div></div></div></div></div></div></div></div></div></section><section id="h.5022890d9d24c1ec_47" class="yaqOZd"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-uQSCkd Ft7HRd-AhqUyc-uQSCkd purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_44" class="hJDwNd-AhqUyc-uQSCkd Ft7HRd-AhqUyc-uQSCkd jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd OWlOyc baZpAe"><div jscontroller="VYKRW" jsaction="rcuQ6b:rcuQ6b;"><div class="WIdY2d M1aSXe" data-embed-doc-id="1i9r49FALY_0Cp5fDKPYRrX6zId78TCl6" data-embed-open-url="https://drive.google.com/open?authuser=0&amp;id=1i9r49FALY_0Cp5fDKPYRrX6zId78TCl6" data-embed-thumbnail-url="https://drive.google.com/thumbnail?authuser=0&amp;id=1i9r49FALY_0Cp5fDKPYRrX6zId78TCl6&amp;sz=w1469-h712-p-k-nu" data-embed-download-url="https://drive.google.com/uc?id=1i9r49FALY_0Cp5fDKPYRrX6zId78TCl6&amp;export=download"><div jsname="WXxXjd" class="t5qrWd" style="padding-top: 52.5568181818%"></div><iframe jsname="L5Fo6c" jscontroller="usmiIb" jsaction="rcuQ6b:WYd;" class="YMEQtf L6cTce-purZT L6cTce-pSzOP" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation" frameborder="0" aria-label="Drive, Copia de CV DIGITAL2020.pptx" data-src="https://drive.google.com/file/d/1i9r49FALY_0Cp5fDKPYRrX6zId78TCl6/preview?authuser=0" allowfullscreen></iframe><div class="TPTLxf"></div><div class="JmGwdf SzkQif L6cTce-hJDwNd L6cTce-dQCS7c" role="link" tabindex="0" jsaction="click:QNTBYd" aria-label="Drive, Copia de CV DIGITAL2020.pptx"><div class="t0pVcb"><div class="TZchLb FQ4MFe" style="background-image: url(https://drive.google.com/thumbnail?authuser=0&amp;id=1i9r49FALY_0Cp5fDKPYRrX6zId78TCl6&amp;sz=w1469-h712-p-k-nu);"></div></div><div class="pHBU0d"><div class="ojy9Ed"><img class="McKOwe" src="https://www.google.com/images/icons/product/drive-32.png"><span class="pB4Yfc">Copia de CV DIGITAL2020.pptx</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></section><section id="h.5022890d9d24c1ec_68" class="yaqOZd"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_65" class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="i2gjFc Mi644 j2p0Pb zjopje"><a href="http://www.google.com/url?q=http%3A%2F%2Ffacebook&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw1AQqRwMtjyFM_VpeWo6HQ5" target="_blank" class="RNpQXe AIKCSc" style="width: 32px; height: 32px; margin: 6px; background-color: rgb(95, 99, 104); background-image: linear-gradient(rgb(95, 99, 104), rgb(95, 99, 104));"><img src="https://ssl.gstatic.com/atari/images/sociallinks/link_white_28dp.png" alt="Víncular" class="lEB4Hf" style="width: 28px; height: 28px;" width="28" height="28"></a></div></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-OiUrBf Ft7HRd-AhqUyc-OiUrBf JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div></div></div></div></div></section><section id="h.5022890d9d24c1ec_72" class="yaqOZd"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-R6PoUb Ft7HRd-AhqUyc-R6PoUb JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div></div></div><div class="hJDwNd-AhqUyc-OwsYgb Ft7HRd-AhqUyc-OwsYgb purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.5022890d9d24c1ec_69" class="hJDwNd-AhqUyc-OwsYgb Ft7HRd-AhqUyc-OwsYgb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfKv4Kn0uAYuzeeYcbY_ckjuC2MdJU6VCjzH9YUpDE_TetYPMJ570NvzaOlZm7LqJCW6lZaBu80tfrlHV8ogFf1T7boDidQjYcco4yqq76CRVu0_RTBgX34I84s-94yJJgfKdLRHI_Es92cPszRNQOrtFivToXCD1O5U3FKhLzcEMYF4fBjWO5hyULatsPfEQCCLdLbBytIpx4_sNP64hdTWlJSb19RiV27HrY=w1280" class="CENy8b" role="img"></div></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb JNdkSc SQVYQc L6cTce-purZT L6cTce-pSzOP"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"></div></div></div></div></div></section><section id="h.33dad8cc95c8b9e5_20" class="yaqOZd"><div class="IFuOkc"></div><div class="mYVXT"><div class="LS81yb VICjCf j5pSsc db35Fc" tabindex="-1"><div class="hJDwNd-AhqUyc-EehZO Ft7HRd-AhqUyc-EehZO purZT-AhqUyc-II5mzb ZcASvf-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c Ktthjf-AhqUyc-qWD73c JNdkSc SQVYQc"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.33dad8cc95c8b9e5_10" class="hJDwNd-AhqUyc-EehZO Ft7HRd-AhqUyc-EehZO jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd OWlOyc baZpAe"><div jscontroller="VYKRW" jsaction="rcuQ6b:rcuQ6b;"><div class="WIdY2d M1aSXe"><div jsname="WXxXjd" style="padding-top: 537.7220480669%"></div><div class="YMEQtf"><div jsname="jkaScf" jscontroller="szRU7e" class="w536ob" data-enable-interaction="true" data-url="https://2085515000-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html" data-code=" &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot; class=&quot;scroll-smooth&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;CV Interactivo | Franko Salgado Bonilla&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Chosen Palette: Light Mode - Blanco Hueso y Carmín --&gt;
+    &lt;!-- Application Structure Plan: La estructura SPA se mantiene. Los cambios son de &#39;theming&#39;. El cuerpo (body) se establece en &#39;bg-stone-50&#39; (blanco hueso), los contenedores de contenido (cards, secciones) en &#39;bg-white&#39;, y el texto principal en &#39;text-gray-900&#39;. El &#39;primary&#39; color (rojo carmín) se mantiene. --&gt;
+    &lt;!-- Visualization &amp; Content Choices: 
+        - Trayectoria (Timeline): &#39;bg-gray-900&#39; -&gt; &#39;bg-white&#39;. El borde &#39;active&#39; &#39;border-primary&#39; se mantiene rojo carmín.
+        - Resumen de Carrera (Chart.js): La paleta de colores del gráfico se mantiene (tonos de rojo y gris), pero el color del borde y las etiquetas se ajustan para un fondo claro.
+        - Logros (Cards): &#39;bg-gray-900&#39; -&gt; &#39;bg-white&#39;. El &#39;border-accent&#39; se mantiene rojo brillante.
+        - Habilidades (Tabs): &#39;bg-gray-900&#39; -&gt; &#39;bg-white&#39;. El &#39;active&#39; state de los botones se mantiene rojo carmín.
+    --&gt;
+    &lt;!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --&gt;
+    &lt;style&gt;
+        .timeline-item {
+            cursor: pointer;
+        }
+        .timeline-item.active {
+            border-color: #b91c1c; /* Carmín (red-700) */
+            transform: scale(1.05);
+        }
+        .tab-button.active {
+            border-color: #b91c1c; /* Carmín (red-700) */
+            background-color: #b91c1c;
+            color: #ffffff;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    &lt;/style&gt;
+    &lt;script&gt;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: [&#39;Inter&#39;, &#39;sans-serif&#39;],
+                    },
+                    colors: {
+                        &#39;primary&#39;: &#39;#b91c1c&#39;,   /* Rojo Carmín (red-700) */
+                        &#39;secondary&#39;: &#39;#fca5a5&#39;, /* Rojo Claro (red-300) */
+                        &#39;accent&#39;: &#39;#ef4444&#39;,    /* Rojo Brillante (red-500) */
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-stone-50 font-sans text-gray-900 antialiased&quot;&gt;
+
+    &lt;header class=&quot;bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 shadow-red-900/10&quot;&gt;
+        &lt;nav class=&quot;container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center&quot;&gt;
+            &lt;div class=&quot;flex items-center&quot;&gt;
+                &lt;span class=&quot;text-2xl font-bold text-primary&quot;&gt;Franko Salgado&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;hidden md:flex space-x-6&quot;&gt;
+                &lt;a href=&quot;#inicio&quot; class=&quot;text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Inicio&lt;/a&gt;
+                &lt;a href=&quot;#trayectoria&quot; class=&quot;text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Trayectoria&lt;/a&gt;
+                &lt;a href=&quot;#logros&quot; class=&quot;text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Logros&lt;/a&gt;
+                &lt;a href=&quot;#habilidades&quot; class=&quot;text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Habilidades&lt;/a&gt;
+                &lt;a href=&quot;#contacto&quot; class=&quot;text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Contacto&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;md:hidden&quot;&gt;
+                &lt;button id=&quot;mobile-menu-button&quot; class=&quot;text-gray-700 focus:outline-none&quot;&gt;
+                    &lt;svg class=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+        &lt;div id=&quot;mobile-menu&quot; class=&quot;hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white shadow-lg&quot;&gt;
+            &lt;a href=&quot;#inicio&quot; class=&quot;block text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Inicio&lt;/a&gt;
+            &lt;a href=&quot;#trayectoria&quot; class=&quot;block text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Trayectoria&lt;/a&gt;
+            &lt;a href=&quot;#logros&quot; class=&quot;block text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Logros&lt;/a&gt;
+            &lt;a href=&quot;#habilidades&quot; class=&quot;block text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Habilidades&lt;/a&gt;
+            &lt;a href=&quot;#contacto&quot; class=&quot;block text-gray-600 hover:text-primary transition-colors nav-link&quot;&gt;Contacto&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&quot;container mx-auto px-4 sm:px-6 lg:px-8 py-12&quot;&gt;
+        
+        &lt;section id=&quot;inicio&quot; class=&quot;pt-20 pb-28&quot;&gt;
+            &lt;div class=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center&quot;&gt;
+                
+    &lt;img 
+      src= https://imgur.com/AYOFHcm.png
+      alt=&quot;Franko Salgado&quot; 
+      class=&quot;rounded-full w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-cover shadow-xl border-8 border-white&quot;
+    &gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;md:col-span-2 text-center md:text-left&quot;&gt;
+    &lt;/div&gt;
+                    &lt;h1 class=&quot;text-4xl md:text-6xl font-extrabold text-primary mb-4&quot;&gt;&quot;Franko Salgado Bonilla&lt;/h1&gt;
+                    &lt;p class=&quot;text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto md:mx-0&quot;&gt;
+                        Chef Ejecutivo | Consultor Culinario y Digital | Conferencista
+                    &lt;/s_&gt;
+                    &lt;div class=&quot;mt-8 max-w-4xl mx-auto md:mx-0 text-lg text-gray-700 text-left leading-relaxed&quot;&gt;
+                        &lt;p&gt;
+                            Chef Ejecutivo con más de 15 años de experiencia internacional (Costa Rica y México) liderando cocinas en hoteles de lujo (Marriott, InterContinental, Tabacón) y propiedades exclusivas. Experto en alta cocina, cocina molecular, fusión mediterránea, italiana y francesa.
+                        &lt;/p&gt;
+                        &lt;p class=&quot;mt-4&quot;&gt;
+                            Además de la gestión culinaria, poseo experiencia como Consultor Digital para la industria gastronómica, desarrollando campañas de marketing con datos medibles, y como Conferencista culinario.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id=&quot;trayectoria&quot; class=&quot;py-16&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-center text-primary mb-12&quot;&gt;Trayectoria Profesional Interactiva&lt;/h2&gt;
+            &lt;p class=&quot;text-center text-gray-600 mb-10 max-w-2xl mx-auto&quot;&gt;
+                Esta es mi línea de carrera. Haz clic en cualquier puesto para ver los detalles de mis responsabilidades y logros en ese rol.
+            &lt;/p&gt;
+            
+            &lt;div class=&quot;flex flex-col md:flex-row md:overflow-x-auto md:pb-6 space-y-4 md:space-y-0 md:space-x-4&quot;&gt;
+                &lt;div class=&quot;flex-shrink-0 grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-row gap-4&quot;&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;1&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef Ejecutivo&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Verano Estate&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2022 - Actual)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;2&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef &amp; Consultor&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Franko&#39;s Kitchen&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2022 - Actual)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;3&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef Docente&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Inst. G. Vallarta&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2020 - 2021)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;4&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Rest. D’Cortes&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2019)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;5&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef Privado&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Guanacaste, CR&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2018)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;6&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Sous Chef Ejecutivo&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Hotel Royal Corin&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2015)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;7&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Cocinero / Chef&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Hotel ManGroovy&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2013 - 2015)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;8&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef Ejecutivo&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Rest. Oldnü&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2012 - 2013)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;9&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef de Partier&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;InterContinental&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2010 - 2012)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;10&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef Partier&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Marea, Prieta Beach&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2006 - 2011)&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;timeline-item bg-white p-4 rounded-lg shadow-md border-2 border-transparent transition-all duration-300 w-full md:w-48 text-center&quot; data-id=&quot;11&quot;&gt;
+                        &lt;p class=&quot;font-semibold text-primary&quot;&gt;Chef de Partier&lt;/p&gt;
+                        &lt;p class=&quot;text-sm text-gray-500&quot;&gt;Tabacon Resort&lt;/p&gt;
+                        &lt;p class=&quot;text-xs text-gray-400&quot;&gt;(2007 - 2010)&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div id=&quot;experience-details&quot; class=&quot;mt-12 bg-white p-6 md:p-8 rounded-lg shadow-xl min-h-[200px]&quot;&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id=&quot;enfoque&quot; class=&quot;py-16 bg-white rounded-lg shadow-lg my-16&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-center text-primary mb-10&quot;&gt;Enfoque de Carrera&lt;/h2&gt;
+            &lt;p class=&quot;text-center text-gray-600 mb-10 max-w-2xl mx-auto&quot;&gt;
+                Este gráfico resume dónde he concentrado mi experiencia profesional a lo largo de los años, mostrando mi evolución desde la alta hotelería hasta el emprendimiento digital y la educación.
+            &lt;/p&gt;
+            &lt;div class=&quot;chart-container&quot;&gt;
+                &lt;canvas id=&quot;careerFocusChart&quot;&gt;&lt;/canvas&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id=&quot;logros&quot; class=&quot;py-16&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-center text-primary mb-12&quot;&gt;Logros y Reconocimientos Clave&lt;/h2&gt;
+            &lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;&gt;
+                
+                &lt;div class=&quot;bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent&quot;&gt;
+                    &lt;span class=&quot;text-3xl mb-2 block&quot;&gt;🏆&lt;/span&gt;
+                    &lt;h3 class=&quot;font-semibold text-lg text-primary mb-2&quot;&gt;Certificat D&#39;Excellence&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-600&quot;&gt;Le Cordon Bleu, París (2024)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent&quot;&gt;
+                    &lt;span class=&quot;text-3xl mb-2 block&quot;&gt;🏅&lt;/span&gt;
+                    &lt;h3 class=&quot;font-semibold text-lg text-primary mb-2&quot;&gt;Reconocimiento Culinario&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-600&quot;&gt;Otorgado por Gastón Acurio, Lima (2024)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent&quot;&gt;
+                    &lt;span class=&quot;text-3xl mb-2 block&quot;&gt;🎙️&lt;/span&gt;
+                    &lt;h3 class=&quot;font-semibold text-lg text-primary mb-2&quot;&gt;Conferencista Magistral&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-600&quot;&gt;1er Conronal de #Investur, Nayarit (2023)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent&quot;&gt;
+                    &lt;span class=&quot;text-3xl mb-2 block&quot;&gt;🎖️&lt;/span&gt;
+                    &lt;h3 class=&quot;font-semibold text-lg text-primary mb-2&quot;&gt;Medalla a la Excelencia&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-600&quot;&gt;Otorgada por Gerard Dupont y Hugo Lombardi (en Tabacon Resort)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent&quot;&gt;
+                    &lt;span class=&quot;text-3xl mb-2 block&quot;&gt;📸&lt;/span&gt;
+                    &lt;h3 class=&quot;font-semibold text-lg text-primary mb-2&quot;&gt;Imagen Publicitaria&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-600&quot;&gt;Seleccionado como imagen para publicidad del PIMA&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent&quot;&gt;
+                    &lt;span class=&quot;text-3xl mb-2 block&quot;&gt;📺&lt;/span&gt;
+                    &lt;h3 class=&quot;font-semibold text-lg text-primary mb-2&quot;&gt;Chef en Vivo&lt;/h3&gt;
+                    &lt;p class=&quot;text-gray-600&quot;&gt;Impartición de clases de cocina en vivo para Teletica&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id=&quot;habilidades&quot; class=&quot;py-16&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-center text-primary mb-12&quot;&gt;Habilidades y Competencias&lt;/h2&gt;
+            &lt;p class=&quot;text-center text-gray-600 mb-10 max-w-2xl mx-auto&quot;&gt;
+                Mi carrera me ha permitido desarrollar un conjunto de habilidades diverso, que abarca desde la técnica culinaria de precisión hasta la gestión de equipos y el marketing digital.
+            &lt;/p&gt;
+            
+            &lt;div&gt;
+                &lt;div class=&quot;flex flex-col sm:flex-row justify-center border-b border-gray-300 mb-6&quot;&gt;
+                    &lt;button class=&quot;tab-button py-3 px-6 font-semibold text-gray-600 border-b-2 border-transparent hover:text-primary transition-colors active&quot; data-tab=&quot;cocina&quot;&gt;
+                        Alta Cocina
+                    &lt;/button&gt;
+                    &lt;button class=&quot;tab-button py-3 px-6 font-semibold text-gray-600 border-b-2 border-transparent hover:text-primary transition-colors&quot; data-tab=&quot;gestion&quot;&gt;
+                        Gestión y Liderazgo
+                    &lt;/button&gt;
+                    &lt;button class=&quot;tab-button py-3 px-6 font-semibold text-gray-600 border-b-2 border-transparent hover:text-primary transition-colors&quot; data-tab=&quot;digital&quot;&gt;
+                        Digital y Medios
+                    &lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;div id=&quot;tab-content&quot; class=&quot;bg-white p-6 rounded-lg shadow-lg&quot;&gt;
+                    &lt;div id=&quot;cocina&quot; class=&quot;tab-pane&quot;&gt;
+                        &lt;ul class=&quot;list-disc list-inside space-y-2 text-gray-700&quot;&gt;
+                            &lt;li&gt;Cocina Molecular&lt;/li&gt;
+                            &lt;li&gt;Fusión Mediterránea&lt;/li&gt;
+                            &lt;li&gt;Cocina Francesa (Clásica y Moderna)&lt;/li&gt;
+                            &lt;li&gt;Cocina Italiana (Auténtica y de Vanguardia)&lt;/li&gt;
+                            &lt;li&gt;Cocina Española (Tradicional y Tapas)&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div id=&quot;gestion&quot; class=&quot;tab-pane hidden&quot;&gt;
+                        &lt;ul class=&quot;list-disc list-inside space-y-2 text-gray-700&quot;&gt;
+                            &lt;li&gt;Liderazgo y Formación de Equipos&lt;/li&gt;
+                            &lt;li&gt;Creación y Diseño de Menús&lt;/li&gt;
+                            &lt;li&gt;Control de Costos y Mermas&lt;/li&gt;
+                            &lt;li&gt;Gestión de Inventarios y Pedidos&lt;/li&gt;
+                            &lt;li&gt;Mantenimiento de Estándares de Calidad y Lujo&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div id=&quot;digital&quot; class=&quot;tab-pane hidden&quot;&gt;
+                        &lt;ul class=&quot;list-disc list-inside space-y-2 text-gray-700&quot;&gt;
+                            &lt;li&gt;Consultoría de Marketing Gastronómico&lt;/li&gt;
+                            &lt;li&gt;Desarrollo de Campañas con Datos Medibles&lt;/li&gt;
+                            &lt;li&gt;Conferencista y Orador Público&lt;/li&gt;
+                            &lt;li&gt;Experiencia frente a cámaras (TV y Publicidad)&lt;/li&gt;
+                            &lt;li&gt;Software: Microsoft Office (Paquete completo)&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;section id=&quot;formacion&quot; class=&quot;py-16&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold text-center text-primary mb-12&quot;&gt;Formación Académica&lt;/h2&gt;
+            &lt;div class=&quot;max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg&quot;&gt;
+                &lt;ul class=&quot;space-y-4&quot;&gt;
+                    &lt;li class=&quot;border-b border-gray-200 pb-4&quot;&gt;
+                        &lt;h3 class=&quot;font-semibold text-lg text-primary&quot;&gt;Cocinero Profesional e Internacional&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-600&quot;&gt;Instituto Gastronómico Escofierr (2005-2007)&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;border-b border-gray-200 pb-4&quot;&gt;
+                        &lt;h3 class=&quot;font-semibold text-lg text-primary&quot;&gt;Diplomado en Artes Culinarias&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-600&quot;&gt;Universidad Interamericana&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;border-b border-gray-200 pb-4&quot;&gt;
+                        &lt;h3 class=&quot;font-semibold text-lg text-primary&quot;&gt;Cocinero 1 (Española, Italiana, Francesa)&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-600&quot;&gt;Instituto Nacional de Aprendizaje (INA)&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;h3 class=&quot;font-semibold text-lg text-primary&quot;&gt;Bachillerato en Educación Media&lt;/h3&gt;
+                        &lt;p class=&quot;text-gray-600&quot;&gt;Liceo de Santa Cruz (2000)&lt;/p&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;&lt;div class=&quot;tab-pane hidden&quot; id=&quot;idiomas-pane&quot;&gt;
+        &lt;div class=&quot;space-y-4&quot;&gt;
+         &lt;div&gt;
+          &lt;div class=&quot;flex justify-between mb-2&quot;&gt;&lt;span class=&quot;font-semibold&quot;&gt;Español&lt;/span&gt; &lt;span&gt;Nativo&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;h-3 rounded-full overflow-hidden&quot; id=&quot;skill-bg-7&quot;&gt;
+           &lt;div class=&quot;skill-bar h-full rounded-full&quot; style=&quot;width: 100%&quot; id=&quot;skill-bar-7&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div&gt;
+          &lt;div class=&quot;flex justify-between mb-2&quot;&gt;&lt;span class=&quot;font-semibold&quot;&gt;Inglés&lt;/span&gt; &lt;span&gt;Avanzado&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;h-3 rounded-full overflow-hidden&quot; id=&quot;skill-bg-8&quot;&gt;
+           &lt;div class=&quot;skill-bar h-full rounded-full&quot; style=&quot;width: 88%&quot; id=&quot;skill-bar-8&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div&gt;
+          &lt;div class=&quot;flex justify-between mb-2&quot;&gt;&lt;span class=&quot;font-semibold&quot;&gt;Portugués&lt;/span&gt; &lt;span&gt;Intermedio&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;h-3 rounded-full overflow-hidden&quot; id=&quot;skill-bg-9&quot;&gt;
+           &lt;div class=&quot;skill-bar h-full rounded-full&quot; style=&quot;width: 65%&quot; id=&quot;skill-bar-9&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+         &lt;/div&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+    &lt;/div&gt;
+   &lt;/section&gt;
+        &lt;/section&gt;
+
+    &lt;/main&gt;
+
+    &lt;footer id=&quot;contacto&quot; class=&quot;bg-primary text-white py-16&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;&gt;
+            &lt;h2 class=&quot;text-3xl font-bold mb-6&quot;&gt;Contacta Conmigo&lt;/h2&gt;
+            &lt;p class=&quot;text-lg text-secondary mb-8 max-w-xl mx-auto&quot;&gt;
+                Estoy disponible para roles de Chef Ejecutivo, proyectos de consultoría, servicios de chef privado y conferencias.
+            &lt;/p&gt;
+            &lt;div class=&quot;max-w-xl mx-auto text-left&quot;&gt;
+                &lt;form action=&quot;https://formspree.io/f/xovlbjkz&quot; method=&quot;POST&quot; class=&quot;space-y-6&quot;&gt;
+                    &lt;div&gt;
+                        &lt;label for=&quot;name&quot; class=&quot;block text-sm font-medium text-secondary&quot;&gt;Nombre&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; required class=&quot;mt-1 block w-full p-3 rounded-md bg-white/10 border-white/20 text-white placeholder-gray-300 focus:border-accent focus:ring-accent focus:text-gray-900 focus:bg-white&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;label for=&quot;email&quot; class=&quot;block text-sm font-medium text-secondary&quot;&gt;Email&lt;/label&gt;
+                        &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; required class=&quot;mt-1 block w-full p-3 rounded-md bg-white/10 border-white/20 text-white placeholder-gray-300 focus:border-accent focus:ring-accent focus:text-gray-900 focus:bg-white&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;label for=&quot;message&quot; class=&quot;block text-sm font-medium text-secondary&quot;&gt;Mensaje&lt;/label&gt;
+                        &lt;textarea id=&quot;message&quot; name=&quot;message&quot; rows=&quot;4&quot; required class=&quot;mt-1 block w-full p-3 rounded-md bg-white/10 border-white/20 text-white placeholder-gray-300 focus:border-accent focus:ring-accent focus:text-gray-900 focus:bg-white&quot;&gt;&lt;/textarea&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-right&quot;&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-primary bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent&quot;&gt;
+                            Enviar Mensaje
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+                &lt;div class=&quot;mt-10 pt-6 border-t border-red-600/50 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8&quot;&gt;
+                    &lt;a href=&quot;tel:+523221606843&quot; class=&quot;text-lg hover:text-accent transition-colors&quot;&gt;
+                        📞 +52 322 160 6843
+                    &lt;/a&gt;
+                    &lt;span class=&quot;text-lg&quot;&gt;
+                        📍 Costa Rica &amp; México
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script&gt;
+        document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+            
+            const experienceData = {
+                1: {
+                    puesto: &#39;Chef Ejecutivo&#39;,
+                    lugar: &#39;Verano Estate, Conchas Chinas, PV, México (2022 - Actualidad)&#39;,
+                    desc: [
+                        &#39;Liderazgo de la experiencia culinaria de alto nivel para un complejo residencial de lujo.&#39;,
+                        &#39;Gestión integral de la cocina, creación de menús, control de costos y supervisión de personal.&#39;
+                    ]
+                },
+                2: {
+                    puesto: &#39;Chef Privado &amp; Consultor Digital&#39;,
+                    lugar: &#39;Emprendimiento Propio (Franko\&#39;s Kitchen) (2022 - Actualidad)&#39;,
+                    desc: [
+                        &#39;Servicios de chef privado de alto perfil en la región de Puerto Vallarta y Guanacaste.&#39;,
+                        &#39;Consultoría digital para restaurantes: desarrollo e implementación de campañas de marketing gastronómico con análisis de datos medibles.&#39;
+                    ]
+                },
+                3: {
+                    puesto: &#39;Chef Docente&#39;,
+                    lugar: &#39;Instituto Gastronómico Instituto Vallarta, México (2020 - 2021)&#39;,
+                    desc: [
+                        &#39;Instructor culinario impartiendo técnicas de cocina profesional a nuevas generaciones de chefs.&#39;
+                    ]
+                },
+                4: {
+                    puesto: &#39;Chef&#39;,
+                    lugar: &#39;Restaurante D’Cortes, México (2019)&#39;,
+                    desc: [
+                        &#39;Colaboración en restaurante de alta cocina bajo la dirección del Chef Leopoldo Cortés.&#39;
+                    ]
+                },
+                5: {
+                    puesto: &#39;Chef Privado&#39;,
+                    lugar: &#39;Guanacaste, Costa Rica (2018)&#39;,
+                    desc: [
+                        &#39;Servicios de chef privado, colaborando directamente con el Chef Sebastian Couratier.&#39;
+                    ]
+                },
+                6: {
+                    puesto: &#39;Sous Chef Ejecutivo&#39;,
+                    lugar: &#39;Hotel Royal Corin, La Fortuna, Costa Rica (2015)&#39;,
+                    desc: [
+                        &#39;Segundo al mando de la operación culinaria del hotel, supervisando personal y gestión de cocina.&#39;
+                    ]
+                },
+                7: {
+                    puesto: &#39;Cocinero / Chef&#39;,
+                    lugar: &#39;Hotel ManGroovy, Autograph Collection (Marriott), Guanacaste (2013 - 2015)&#39;,
+                    desc: [
+                        &#39;Ejecución de estándares de calidad bajo la dirección del Chef Walter Andrés.&#39;
+                    ]
+                },
+                8: {
+                    puesto: &#39;Chef Ejecutivo&#39;,
+                    lugar: &#39;Restaurante Oldnü, Santa Ana, San José (2012 - 2013)&#39;,
+                    desc: [
+                        &#39;Liderazgo de cocina de nueva tendencia (molecular) y fusión mediterránea e italiana.&#39;
+                    ]
+                },
+                9: {
+                    puesto: &#39;Chef de Partier&#39;,
+                    lugar: &#39;Hotel Real Intercontinental, Santa Ana (2010 - 2012)&#39;,
+                    desc: [
+                        &#39;Supervisor en el Restaurante Alfredo (especialidad italiana).&#39;
+                    ]
+                },
+                10: {
+                    puesto: &#39;Chef Partier&#39;,
+                    lugar: &#39;Restaurante Marea, Prieta Beach Club (2006 - 2011)&#39;,
+                    desc: [
+                        &#39;Supervisión de personal, realización de pedidos y seguimiento de estándares.&#39;
+                    ]
+                },
+                11: {
+                    puesto: &#39;Chef de Partier&#39;,
+                    lugar: &#39;Tabacon Termal Resort, La Fortuna (2007 - 2010)&#39;,
+                    desc: [
+                        &#39;Segundo al mando (después del Sous Chef), encargado de montajes y producciones.&#39;
+                    ]
+                }
+            };
+
+            const detailsContainer = document.getElementById(&#39;experience-details&#39;);
+            const timelineItems = document.querySelectorAll(&#39;.timeline-item&#39;);
+            
+            function updateExperienceDetails(id) {
+                const data = experienceData[id];
+                if (!data) return;
+
+                let descHtml = &#39;&lt;ul class=&quot;list-disc list-inside space-y-2 text-gray-700&quot;&gt;&#39;;
+                data.desc.forEach(item =&gt; {
+                    descHtml += `&lt;li&gt;${item}&lt;/li&gt;`;
+                });
+                descHtml += &#39;&lt;/ul&gt;&#39;;
+
+                detailsContainer.innerHTML = `
+                    &lt;h3 class=&quot;text-2xl font-bold text-primary mb-2&quot;&gt;${data.puesto}&lt;/h3&gt;
+                    &lt;p class=&quot;text-lg font-semibold text-gray-600 mb-4&quot;&gt;${data.lugar}&lt;/p&gt;
+                    ${descHtml}
+                `;
+                
+                timelineItems.forEach(item =&gt; {
+                    item.classList.remove(&#39;active&#39;, &#39;border-primary&#39;);
+                    if (item.dataset.id === id) {
+                        item.classList.add(&#39;active&#39;, &#39;border-primary&#39;);
+                    }
+                });
+            }
+            
+            timelineItems.forEach(item =&gt; {
+                item.addEventListener(&#39;click&#39;, () =&gt; {
+                    updateExperienceDetails(item.dataset.id);
+                });
+            });
+
+            updateExperienceDetails(&#39;1&#39;);
+
+            const tabButtons = document.querySelectorAll(&#39;.tab-button&#39;);
+            const tabPanes = document.querySelectorAll(&#39;.tab-pane&#39;);
+
+            tabButtons.forEach(button =&gt; {
+                button.addEventListener(&#39;click&#39;, () =&gt; {
+                    tabButtons.forEach(btn =&gt; btn.classList.remove(&#39;active&#39;, &#39;text-primary&#39;));
+                    button.classList.add(&#39;active&#39;, &#39;text-primary&#39;);
+
+                    tabPanes.forEach(pane =&gt; {
+                        pane.classList.add(&#39;hidden&#39;);
+                        if (pane.id === button.dataset.tab) {
+                            pane.classList.remove(&#39;hidden&#39;);
+                        }
+                    });
+                });
+            });
+
+            const mobileMenuButton = document.getElementById(&#39;mobile-menu-button&#39;);
+            const mobileMenu = document.getElementById(&#39;mobile-menu&#39;);
+
+            mobileMenuButton.addEventListener(&#39;click&#39;, () =&gt; {
+                mobileMenu.classList.toggle(&#39;hidden&#39;);
+            });
+
+            document.querySelectorAll(&#39;.nav-link&#39;).forEach(link =&gt; {
+                link.addEventListener(&#39;click&#39;, (e) =&gt; {
+                    if (mobileMenu.offsetParent !== null) {
+                         mobileMenu.classList.add(&#39;hidden&#39;);
+                    }
+                    if (link.hash !== &quot;&quot;) {
+                        e.preventDefault();
+                        const hash = link.hash;
+                        const targetElement = document.querySelector(hash);
+                        if(targetElement) {
+                            const headerOffset = document.querySelector(&#39;header&#39;).offsetHeight;
+                            const elementPosition = targetElement.offsetTop;
+                            window.scrollTo({
+                                top: elementPosition - headerOffset - 20,
+                                behavior: &quot;smooth&quot;
+                            });
+                        }
+                    }
+                });
+            });
+
+            const ctx = document.getElementById(&#39;careerFocusChart&#39;).getContext(&#39;2d&#39;);
+            new Chart(ctx, {
+                type: &#39;doughnut&#39;,
+                data: {
+                    labels: [&#39;Hoteles de Lujo&#39;, &#39;Emprendimiento y Consultoría&#39;, &#39;Restaurantes de Alta Cocina&#39;, &#39;Educación y Medios&#39;],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [
+                            &#39;#b91c1c&#39;,   /* Carmín (red-700) */
+                            &#39;#ef4444&#39;,   /* Rojo Brillante (red-500) */
+                            &#39;#fca5a5&#39;,   /* Rojo Claro (red-300) */
+                            &#39;#4b5563&#39;    /* Gris (gray-600) */
+                        ],
+                        borderColor: &#39;#ffffff&#39;,
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: &#39;bottom&#39;,
+                            labels: {
+                                padding: 20,
+                                color: &#39;#4b5563&#39;,
+                                font: {
+                                    size: 14,
+                                    family: &#39;Inter, sans-serif&#39;
+                                }
+                            }
+                        },
+                        tooltip: {
+                            bodyFont: {
+                                size: 14,
+                                family: &#39;Inter, sans-serif&#39;
+                            },
+                            titleFont: {
+                                size: 16,
+                                family: &#39;Inter, sans-serif&#39;,
+                                weight: &#39;bold&#39;
+                            },
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || &#39;&#39;;
+                                    if (label) {
+                                        label += &#39;: &#39;;
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + &#39;%&#39;;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    cutout: &#39;60%&#39;
+                }
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html" jsaction="rcuQ6b:WYd;"><div class="EmVfjc qs41qe UzswCe" data-loadingmessage=" " jscontroller="qAKInc" jsaction="animationend:kWijWc;dyRcpb:dyRcpb" data-active="true" jsname="Hy6Uif"><div class="Cg7hO" aria-live="assertive" jsname="vyyg5"> </div><div jsname="Hxlbvc" class="xu46lf"><div class="ir3uv uWlRce co39ub"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv GFoASc Cn087"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv WpeOqd hfsr6b"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv rHV3jf EjXFBf"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div></div></div><iframe jsname="WMhH6e" class=" YMEQtf" frameborder="0" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-storage-access-by-user-activation" id="33dad8cc95c8b9e5_10" name="33dad8cc95c8b9e5_10" scrolling="no" title="Incorporación personalizada" aria-label="Incorporación personalizada"></iframe></div></div></div></div></div></div></div></div></div></div></div><div class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re JNdkSc SQVYQc yYI8W HQwdzb"><div class="JNdkSc-SmKAyb LkDMRd"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;zQF9Uc:Qxe3nd;" jsname="F57UId"><div class="oKdM2c ZZyype Kzv0Me"><div id="h.6324afd961df3240_4" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfS2BojfhI5iux7aCD2Rae-MRI20zN4sfexGOZeU9NbIr4L4_LqSimHc-C8henvi7L0Se3Vcz2DXyPn8yXrvpOldfwpqA0Ex9eH39XDILCrw3f2qDZr8NQUllVcjCGWRxJKg8NeJZY2Z6uZ_D4KBOdVf7cFnkdsxtEnpNJnBfOwvBpEU3Bp0ygdcTxUXCzhpjK02I8O5LfQsvyOAT4M_jfQdBR9zRMyBhtPQJM=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.6324afd961df3240_7" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec QaN0Zc QjXeod"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkdM_HJP9kuRgE21-B265KlQoTTnxNPB1PEU1l2fWoV6umOTk-HakxMaz5FU46akHLh-Iw_y8dEBC0ZPa6ihkhJjKQdcu8viQkxbWBVeUEClyQwugfTuRzSk7Pg1cGKqQntaboHBO5yja5b8RSHhhVRzxu4VYEm2pCRE26pSlCJ0aVnFD6paMG2WkASMFZKU5U3NQhFAKMrRtjge0WR0JDjCwFd1gkky1FHscLI=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.6324afd961df3240_9" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec QaN0Zc QjXeod"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCke0syED_A-PVxme7UE4Qrv487nSRSyHJsf-_Hf_w--7aWWN7fJBHwchav3PzuWgvyHDZG0PlxAphMAkkh3UBzzy9dqbTPvSflHFHK053HWdctausrIWQV_AnFUgQIWKupCwE8B9LC6PVLohVvRJuiTIUb9PoFG1PmEp0N1CFoZIQKZa3aoeAnOsXt9Unu7zRUV4zYEtCuNjg8KtOLDRitI09cyIF3rghzae=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_43" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec QaN0Zc QjXeod"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkcZzw82NO7otFOEHRvKxpg3kmSUKll3Ur5VPWEtqLj27kgAknGUHIE4J24vxf7F3Wo1hU9iQPVGyDfcKq79P6ELIH3HjiKZyzBMoxywQpR51Swfsksugig2lCj1KIPGLBr1ao-Hed93azBKmMHoo3hyfCTetO7kwKfZ0EtLxu_u6R3-EoI58OU0OMQkf91GUaztUwD6AFQwd2fQGU1_1PPfubSZdlE16XnS=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_29" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec"><div class="jXK9ad-SmKAyb"><div class="tyJCtd mGzaTb Depvyb baZpAe"></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_42" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkedq6YVhTyBx9FAx1NHfKJlIhY1I1rL35hCYo9xtSfQbWQstRhyeUMm6HQ2umKNKa6lqABmCVOMSrzOw5eCjZKA6odDCpyyxMKYH2400qSj8bW0e0ZsGBt95QSuMTJme_7uwqcbmiGnvnUjYW44sd3aFem4sAGPy3i4DiHy3sIs0G_ZcXCr8D97kCr22OzXB_HUFK6EpoTVOpy5_xkgRrDblTeka6BzHj9ctgc=w1280" class="CENy8b" role="img"></div></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_24" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec"><div class="jXK9ad-SmKAyb"><div class="tyJCtd mGzaTb Depvyb baZpAe"></div></div></div></div><div class="oKdM2c ZZyype"><div id="h.5022890d9d24c1ec_56" class="hJDwNd-AhqUyc-ibL1re Ft7HRd-AhqUyc-ibL1re purZT-AhqUyc-ibL1re ZcASvf-AhqUyc-ibL1re pSzOP-AhqUyc-ibL1re Ktthjf-AhqUyc-ibL1re jXK9ad D2fZ2 zu5uec wHaque g5GTcb"><div class="jXK9ad-SmKAyb"><div class="tyJCtd baZpAe"><div class="t3iYD"><img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfpsc3UYit3jXcaPro75Rr8NwsWoirhFSpjFRIJe9nKUEzFfSrmI8ADshdWVIXaJiWoXij4dtZcQidk2hJNk3raqQg_X6j1535fsj0Z1Jp1N-w8YM1F-wr3xgGADt8d7ZvnBFKMDgKI2gdmO75M_YildOIMEvmC01xSik1iqFOWwzuV1_UcpAC-hWAZ1b75bmAuDHyjqLu5qt5Nf3USNfYWuX8gV21zHVNgokE=w1280" class="CENy8b" role="img"></div></div></div></div></div></div></div></div></div></div></section></div><div class="Xpil1b xgQ6eb"></div><div jscontroller="j1RDQb" jsaction="rcuQ6b:rcuQ6b;MxH79b:JdcaS;FaOgy:XuHpsb;" class="dZA9kd ynRLnc" data-last-updated-at-time="1762845081072" data-is-preview="false"><div role="button" class="U26fgb JRtysb WzwrXb I12f0b K2mXPb zXBiaf ynRLnc" jscontroller="iSvg6e" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;" jsshadow jsname="Bg3gkf" aria-label="Acciones del sitio" aria-disabled="false" tabindex="0" aria-haspopup="true" aria-expanded="false" data-menu-corner="bottom-start" data-anchor-corner="top-start"><div class="NWlf3e MbhUzd" jsname="ksKsZd"></div><span jsslot class="MhXXcc oJeWuf"><span class="Lw7GHd snByac"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg></span></span><div jsname="xl07Ob" style="display:none" aria-hidden="true"><div class="JPdR6b hVNH5c" jscontroller="uY3Nvd" jsaction="IpSVtb:TvD9Pc;fEN2Ze:xzS4ub;frq95c:LNeFm;cFpp9e:J9oOtd; click:H8nU8b; mouseup:H8nU8b; keydown:I481le; keypress:Kr2w4b; blur:O22p3e; focus:H8nU8b" role="menu" tabindex="0" style="position:fixed"><div class="XvhY1d" jsaction="mousedown:p8EH2c; touchstart:p8EH2c;"><div class="JAPqpe K0NPx"><span jsslot class="z80M1 FeRvI" jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8" jsname="j7LFlb" data-disabled-tooltip="El botón de contacto no está disponible en el modo de vista previa" aria-label="Contacto" role="menuitem" tabindex="-1"><div class="aBBjbd MbhUzd" jsname="ksKsZd"></div><div class="uyYuVb oJeWuf" jscontroller="j3gDVb" jsaction="JIbuQc:sGCPHc;" jsmodel="Rta7Nb" data-normalized-path="villaverano.com/chef-franko-salgado/página-principal"><div class="jO7h3c">Contacto</div></div></span><span jsslot class="z80M1 FeRvI" jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8" jsname="j7LFlb" aria-label="Detalles de la página" role="menuitem" tabindex="-1"><div class="aBBjbd MbhUzd" jsname="ksKsZd"></div><div class="uyYuVb oJeWuf" jsaction="JIbuQc:hriXLd;" jsname="Rg8K2c"><div class="jO7h3c">Detalles de la página</div></div></span></div></div></div></div></div></div><div jscontroller="j1RDQb" jsaction="focusin:gBxDVb(srlkmf); focusout:zvXhGb(srlkmf); click:ro2KTd(psdQ5e);JIbuQc:DSypkd(Bg3gkf);MxH79b:JdcaS;rcuQ6b:rcuQ6b;" class="LqzjUe ynRLnc" data-last-updated-at-time="1762845081072" data-is-preview="false"><div jsname="psdQ5e" class="Q0cSn"></div><div jsname="bN97Pc" class="hBW7Hb"><div role="button" class="U26fgb mUbCce fKz7Od kpPxtd QMuaBc M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="Bg3gkf" aria-label="Acciones del sitio" aria-disabled="false" tabindex="-1" aria-hidden="true"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg></span></span></div><div jsname="srlkmf" class="hUphyc"><div class="YkaBSd"><div class="iBkmkf"><span>Última actualización de la página:</span> <span jsname="CFIm1b" class="dji00c" jsaction="AHmuwe:eGiyHb; mouseover:eGiyHb;" tabindex="0" role="contentinfo"></span></div></div><div class="YkaBSd" jscontroller="j3gDVb" jsmodel="Rta7Nb" jsaction="click:sGCPHc;" data-normalized-path="villaverano.com/chef-franko-salgado/página-principal"><div role="button" class="U26fgb kpPxtd J7BuEb" jsshadow aria-label="Contacto " aria-disabled="false" tabindex="0">Contacto</div></div></div></div></div><div jsname="kdb7zb"><div jscontroller="kklOXe" jsmodel="nbZU0e" jsaction="rcuQ6b:rcuQ6b;FaOgy:nkegzf;BU3dg:U3QbAf;HRy4zb:Z8zbSc;" class="Pt0Du TSZdd"><div class="mF4yBc" jsname="LgbsSe"><div jscontroller="TW9Rvc" jsaction="rcuQ6b:WYd;"><div role="presentation" class="U26fgb XHsn7e MAXCNe M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow jsname="LgbsSe" aria-label="Editar esta página" aria-disabled="false" data-tooltip="Editar esta página" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><a class="FKF6mc TpQm9d" href="/u/0/d/1r-Xr4YTcROO44Nk_LTzK0qF9iKFAOamM/p/1ewpkpQLhJplCDxCRtT4b9nPX-VaLgFBx/edit?authuser=0&amp;usp=edit_published_site" aria-label="Editar esta página"><div class="HaXdpb wb61gb"></div><div class="HRp7vf MbhUzd" jsname="ksKsZd"></div><span jsslot class="Ip8zfc"><svg class="EI709d" viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></a></div></div></div></div></div></div></div></div><script nonce="2DTprUq8yW89l-EfXxBEZQ">DOCS_timing['cov']=new Date().getTime();</script><script src="https://www.gstatic.com/_/atari/_/js/k=atari.vw.es_419.SjzgSjcdqkw.O/am=AAAGIA/d=1/rs=AGEqA5lXXX5QV_6S9bGB-0u0vXtYuM8DQg/m=view" id="base-js" nonce="2DTprUq8yW89l-EfXxBEZQ"></script></div></div><div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div></body></html>
